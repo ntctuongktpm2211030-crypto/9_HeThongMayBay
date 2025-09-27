@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airline"
+           xmlns="http://example.com/airline"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:simpleType name="IdInt">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Code20">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="20"/>
+      <xs:pattern value="[A-Za-z0-9_\-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="HumanName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PhoneNumber">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="6"/>
+      <xs:maxLength value="20"/>
+      <xs:pattern value="[0-9()+\- ]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Money">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:fractionDigits value="2"/>
+      <xs:totalDigits value="18"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Percent100">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SeatCode">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{1,2}[A-F]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CabinClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Economy"/>
+      <xs:enumeration value="PremiumEconomy"/>
+      <xs:enumeration value="Business"/>
+      <xs:enumeration value="First"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TicketStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Booked"/>
+      <xs:enumeration value="Paid"/>
+      <xs:enumeration value="Cancelled"/>
+      <xs:enumeration value="CheckedIn"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PassportNumber">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="6"/>
+      <xs:maxLength value="10"/>
+      <xs:pattern value="[A-Z0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

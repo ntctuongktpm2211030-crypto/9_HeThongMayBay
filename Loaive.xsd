@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airline"
+           xmlns="http://example.com/airline"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_type.xsd"/>
+
+  <xs:complexType name="LoaiVeType">
+    <xs:sequence>
+      <xs:element name="MaLoaiVe" type="Code20"/>
+      <xs:element name="MaVe" type="IdInt"/>
+      <xs:element name="TenLoaiVe" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirlineData xmlns="http://example.com/airline"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://example.com/airline airline.xsd">
+
+  <HoChieus>
+    <HoChieu>
+      <SoHoChieu>C1234567</SoHoChieu>
+      <QuocTich>Vietnam</QuocTich>
+      <NgayCap>2021-05-10</NgayCap>
+      <NgayHetHan>2031-05-09</NgayHetHan>
+      <NuocCap>Vietnam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P9876543</SoHoChieu>
+      <QuocTich>Vietnam</QuocTich>
+      <NgayCap>2020-09-01</NgayCap>
+      <NgayHetHan>2030-08-31</NgayHetHan>
+      <NuocCap>Vietnam</NuocCap>
+    </HoChieu>
+  </HoChieus>
+
+  <LoaiVes>
+    <LoaiVe>
+      <MaLoaiVe>ECON_SAVER</MaLoaiVe>
+      <MaVe>1001</MaVe>
+      <TenLoaiVe>Economy Saver</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>BUS_FLEX</MaLoaiVe>
+      <MaVe>1002</MaVe>
+      <TenLoaiVe>Business Flexible</TenLoaiVe>
+    </LoaiVe>
+  </LoaiVes>
+
+  <ChiTietVes>
+    <ChiTietVe>
+      <MaVe>1001</MaVe>
+      <MaTuyenBay>SGN_HAN</MaTuyenBay>
+      <MaHK>501</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>12A</SoGhe>
+      <GiaTien>1500000.00</GiaTien>
+      <Thue>10.00</Thue>
+      <ThanhTien>1650000.00</ThanhTien>
+      <TrangThai>Paid</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>1002</MaVe>
+      <MaTuyenBay>HAN_NRT</MaTuyenBay>
+      <MaHK>502</MaHK>
+      <HangGhe>Business</HangGhe>
+      <SoGhe>3C</SoGhe>
+      <GiaTien>12000000.00</GiaTien>
+      <Thue>10.00</Thue>
+      <ThanhTien>13200000.00</ThanhTien>
+      <TrangThai>Booked</TrangThai>
+    </ChiTietVe>
+  </ChiTietVes>
+
+  <ThongTinHanhKhachs>
+    <ThongTinHanhKhach>
+      <CCCD>321654987</CCCD>
+      <MaVe>1001</MaVe>
+      <SoHoChieu>C1234567</SoHoChieu>
+      <HoTen>Nguyễn Thị Mỹ Lan</HoTen>
+      <SoDienThoai>0912345678</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>654987321</CCCD>
+      <MaVe>1002</MaVe>
+      <SoHoChieu>P9876543</SoHoChieu>
+      <HoTen>Trần Mỹ Nhiên</HoTen>
+      <SoDienThoai>0901234567</SoDienThoai>
+    </ThongTinHanhKhach>
+  </ThongTinHanhKhachs>
+
+</AirlineData>

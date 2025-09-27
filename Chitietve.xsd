@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airline"
+           xmlns="http://example.com/airline"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_type.xsd"/>
+
+  <xs:complexType name="ChiTietVeType">
+    <xs:sequence>
+      <xs:element name="MaVe" type="IdInt"/>
+      <xs:element name="MaTuyenBay" type="Code20"/>
+      <xs:element name="MaHK" type="IdInt"/>
+      <xs:element name="HangGhe" type="CabinClass"/>
+      <xs:element name="SoGhe" type="SeatCode"/>
+      <xs:element name="GiaTien" type="Money"/>
+      <xs:element name="Thue" type="Percent100"/>
+      <xs:element name="ThanhTien" type="Money"/>
+      <xs:element name="TrangThai" type="TicketStatus"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
+
