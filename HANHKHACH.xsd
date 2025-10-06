@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/hanhkhach"
+           xmlns="http://example.com/hanhkhach"
+           elementFormDefault="qualified">
+
+  <!-- Kiểu dữ liệu riêng -->
+  <xs:simpleType name="EmailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PhoneType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{9,11}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PassportType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="7"/>
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Định nghĩa HanhKhach -->
+  <xs:element name="DanhSachHanhKhach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="HanhKhach" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaHK" type="xs:integer"/>
+              <xs:element name="HoTen" type="xs:string"/>
+              <xs:element name="NgaySinh" type="xs:date"/>
+              <xs:element name="Email" type="EmailType"/>
+              <xs:element name="DienThoai" type="PhoneType"/>
+              <xs:element name="SoHoChieu" type="PassportType" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Unique MaHK -->
+    <xs:unique name="Unique_HanhKhach_MaHK">
+      <xs:selector xpath="HanhKhach"/>
+      <xs:field xpath="MaHK"/>
+    </xs:unique>
+  </xs:element>
+
+</xs:schema>

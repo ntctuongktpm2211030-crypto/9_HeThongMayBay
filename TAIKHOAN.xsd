@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/taikhoan"
+           xmlns="http://example.com/taikhoan"
+           xmlns:hk="http://example.com/hanhkhach"
+           elementFormDefault="qualified">
+
+  <!-- Import schema HanhKhach -->
+  <xs:import namespace="http://example.com/hanhkhach"
+             schemaLocation="HANHKHACH.xsd"/>
+
+  <!-- Kiểu dữ liệu riêng -->
+  <xs:simpleType name="UsernameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="4"/>
+      <xs:maxLength value="32"/>
+      <xs:pattern value="[a-zA-Z][a-zA-Z0-9_\\.\\-]{3,31}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PasswordType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="6"/>
+      <xs:maxLength value="64"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Định nghĩa TaiKhoan -->
+  <xs:element name="DanhSachTaiKhoan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaiKhoan" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaTK" type="xs:integer"/>
+              <xs:element name="TenDangNhap" type="UsernameType"/>
+              <xs:element name="MatKhau" type="PasswordType"/>
+              <xs:element name="MaHK" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Unique MaTK -->
+    <xs:unique name="Unique_TaiKhoan_MaTK">
+      <xs:selector xpath="TaiKhoan"/>
+      <xs:field xpath="MaTK"/>
+    </xs:unique>
+
+    <!-- Unique TenDangNhap -->
+    <xs:unique name="Unique_TaiKhoan_TenDangNhap">
+      <xs:selector xpath="TaiKhoan"/>
+      <xs:field xpath="TenDangNhap"/>
+    </xs:unique>
+
+    <!-- Khóa ngoại MaHK tham chiếu HanhKhach.MaHK -->
+    <xs:keyref name="FK_TaiKhoan_HanhKhach"
+               refer="hk:Unique_HanhKhach_MaHK">
+      <xs:selector xpath="TaiKhoan"/>
+      <xs:field xpath="MaHK"/>
+    </xs:keyref>
+  </xs:element>
+
+</xs:schema>

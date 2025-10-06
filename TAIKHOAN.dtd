@@ -1,0 +1,9 @@
+<!ELEMENT DanhSachTaiKhoan (TaiKhoan+)> 
+<!ELEMENT TaiKhoan (MaTK, TenDangNhap, MatKhau, MaHK)>
+
+<!ELEMENT MaTK (#PCDATA)>
+<!ELEMENT TenDangNhap (#PCDATA)>
+<!ELEMENT MatKhau (#PCDATA)>
+<!ELEMENT MaHK (#PCDATA)>
+
+<!-- Lưu ý: DTD không biểu diễn unique, keyref hay minLength/maxLength như XSD. -->

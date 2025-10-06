@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/datcho"
+           xmlns="http://example.com/datcho"
+           xmlns:hk="http://example.com/hanhkhach"
+           elementFormDefault="qualified">
+
+  <!-- Import schema HanhKhach -->
+  <xs:import namespace="http://example.com/hanhkhach"
+             schemaLocation="HANHKHACH.xsd"/>
+
+  <!-- Kiểu dữ liệu riêng -->
+  <xs:simpleType name="TrangThaiDatChoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MOI"/>
+      <xs:enumeration value="XAC_NHAN"/>
+      <xs:enumeration value="HUY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Định nghĩa DatCho -->
+  <xs:element name="DanhSachDatCho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DatCho" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaDC" type="xs:integer"/>
+              <xs:element name="MaHK" type="xs:integer"/>
+              <xs:element name="NgayDat" type="xs:date"/>
+              <xs:element name="SoGhe" type="xs:integer" minOccurs="0"/>
+              <xs:element name="TrangThai" type="TrangThaiDatChoType"/>
+              <xs:element name="GhiChu" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Unique MaDC -->
+    <xs:unique name="Unique_DatCho_MaDC">
+      <xs:selector xpath="DatCho"/>
+      <xs:field xpath="MaDC"/>
+    </xs:unique>
+
+    <!-- Khóa ngoại MaHK tham chiếu HanhKhach.MaHK -->
+    <xs:keyref name="FK_DatCho_HanhKhach"
+               refer="hk:Unique_HanhKhach_MaHK">
+      <xs:selector xpath="DatCho"/>
+      <xs:field xpath="MaHK"/>
+    </xs:keyref>
+  </xs:element>
+
+</xs:schema>
