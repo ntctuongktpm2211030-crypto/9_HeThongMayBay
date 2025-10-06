@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airline"
+           xmlns="http://example.com/airline"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_type.xsd"/>
+  <xs:include schemaLocation="Hochieu.xsd"/>
+  <xs:include schemaLocation="Loaive.xsd"/>
+  <xs:include schemaLocation="Chitietve.xsd"/>
+  <xs:include schemaLocation="ThongtinKH.xsd"/>
+
+  <xs:element name="AirlineData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="HoChieus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HoChieu" type="HoChieuType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoaiVes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LoaiVe" type="LoaiVeType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ChiTietVes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChiTietVe" type="ChiTietVeType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ThongTinHanhKhachs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ThongTinHanhKhach" type="ThongTinHanhKhachType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:key name="pk_HoChieu">
+      <xs:selector xpath="HoChieus/HoChieu"/>
+      <xs:field xpath="SoHoChieu"/>
+    </xs:key>
+
+    <xs:key name="pk_ChiTietVe">
+      <xs:selector xpath="ChiTietVes/ChiTietVe"/>
+      <xs:field xpath="MaVe"/>
+    </xs:key>
+
+    <xs:keyref name="fk_LoaiVe_MaVe" refer="pk_ChiTietVe">
+      <xs:selector xpath="LoaiVes/LoaiVe"/>
+      <xs:field xpath="MaVe"/>
+    </xs:keyref>
+
+    <xs:keyref name="fk_TTHK_MaVe" refer="pk_ChiTietVe">
+      <xs:selector xpath="ThongTinHanhKhachs/ThongTinHanhKhach"/>
+      <xs:field xpath="MaVe"/>
+    </xs:keyref>
+
+    <xs:keyref name="fk_TTHK_SoHoChieu" refer="pk_HoChieu">
+      <xs:selector xpath="ThongTinHanhKhachs/ThongTinHanhKhach"/>
+      <xs:field xpath="SoHoChieu"/>
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
