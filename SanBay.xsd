@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airportsystem"
+           xmlns="http://example.com/airportsystem"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_types.xsd"/>
+
+  <xs:complexType name="SanBayType">
+    <xs:sequence>
+      <xs:element name="MaSanBay" type="IdInt"/>
+      <xs:element name="TenSanBay" type="Varchar100"/>
+      <xs:element name="ThanhPho" type="Varchar100"/>
+      <xs:element name="QuocGia" type="Varchar100"/>
+      <xs:element name="MaIATA" type="IATACode"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airportsystem"
+           xmlns="http://example.com/airportsystem"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_types.xsd"/>
+  <xs:include schemaLocation="SanBay.xsd"/>
+  <xs:include schemaLocation="TuyenBay.xsd"/>
+  <xs:include schemaLocation="ChuyenBay.xsd"/>
+
+  <xs:element name="AirportSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Airports">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Airport" type="SanBayType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Routes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Route" type="TuyenBayType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Flights">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Flight" type="ChuyenBayType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:key name="pk_SanBay">
+      <xs:selector xpath="Airports/Airport"/>
+      <xs:field xpath="MaSanBay"/>
+    </xs:key>
+
+    <xs:key name="pk_TuyenBay">
+      <xs:selector xpath="Routes/Route"/>
+      <xs:field xpath="MaTuyenBay"/>
+    </xs:key>
+
+    <xs:key name="pk_ChuyenBay">
+      <xs:selector xpath="Flights/Flight"/>
+      <xs:field xpath="MaChuyenBay"/>
+    </xs:key>
+
+    <xs:keyref name="fk_TuyenBay_SanBayDi" refer="pk_SanBay">
+      <xs:selector xpath="Routes/Route"/>
+      <xs:field xpath="MaSanBayDi"/>
+    </xs:keyref>
+
+    <xs:keyref name="fk_TuyenBay_SanBayDen" refer="pk_SanBay">
+      <xs:selector xpath="Routes/Route"/>
+      <xs:field xpath="MaSanBayDen"/>
+    </xs:keyref>
+
+    <xs:keyref name="fk_ChuyenBay_TuyenBay" refer="pk_TuyenBay">
+      <xs:selector xpath="Flights/Flight"/>
+      <xs:field xpath="MaTuyenBay"/>
+    </xs:keyref>
+  </xs:element>
+
+</xs:schema>

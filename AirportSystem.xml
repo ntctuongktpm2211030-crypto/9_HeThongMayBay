@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportSystem xmlns="http://example.com/airportsystem"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://example.com/airportsystem AirportSystem.xsd">
+  <Airports>
+    <Airport>
+      <MaSanBay>1</MaSanBay>
+      <TenSanBay>Sân bay Tân Sơn Nhất</TenSanBay>
+      <ThanhPho>TP. Hồ Chí Minh</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>SGN</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>2</MaSanBay>
+      <TenSanBay>Sân bay Nội Bài</TenSanBay>
+      <ThanhPho>Hà Nội</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>HAN</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>3</MaSanBay>
+      <TenSanBay>Sân bay Đà Nẵng</TenSanBay>
+      <ThanhPho>Đà Nẵng</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>DAD</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>4</MaSanBay>
+      <TenSanBay>Sân bay Narita</TenSanBay>
+      <ThanhPho>Tokyo</ThanhPho>
+      <QuocGia>Nhật Bản</QuocGia>
+      <MaIATA>NRT</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>5</MaSanBay>
+      <TenSanBay>Sân bay Changi</TenSanBay>
+      <ThanhPho>Singapore</ThanhPho>
+      <QuocGia>Singapore</QuocGia>
+      <MaIATA>SIN</MaIATA>
+    </Airport>
+  </Airports>
+  <Routes>
+    <Route>
+      <MaTuyenBay>101</MaTuyenBay>
+      <MaSanBayDi>1</MaSanBayDi>
+      <MaSanBayDen>2</MaSanBayDen>
+      <KhoangCach>1200.5</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>102</MaTuyenBay>
+      <MaSanBayDi>2</MaSanBayDi>
+      <MaSanBayDen>3</MaSanBayDen>
+      <KhoangCach>600.0</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>103</MaTuyenBay>
+      <MaSanBayDi>3</MaSanBayDi>
+      <MaSanBayDen>4</MaSanBayDen>
+      <KhoangCach>3500.0</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>104</MaTuyenBay>
+      <MaSanBayDi>4</MaSanBayDi>
+      <MaSanBayDen>5</MaSanBayDen>
+      <KhoangCach>2500.0</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>105</MaTuyenBay>
+      <MaSanBayDi>5</MaSanBayDi>
+      <MaSanBayDen>1</MaSanBayDen>
+      <KhoangCach>2500.0</KhoangCach>
+    </Route>
+  </Routes>
+  <Flights>
+    <Flight>
+      <MaChuyenBay>501</MaChuyenBay>
+      <SoHieu>1001</SoHieu>
+      <MaTuyenBay>101</MaTuyenBay>
+      <GioDi>2025-09-29T08:00:00</GioDi>
+      <GioDen>2025-09-29T10:00:00</GioDen>
+      <MauMaybay>Airbus A320</MauMaybay>
+      <SucChua>180</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>502</MaChuyenBay>
+      <SoHieu>1002</SoHieu>
+      <MaTuyenBay>102</MaTuyenBay>
+      <GioDi>2025-09-29T09:00:00</GioDi>
+      <GioDen>2025-09-29T11:00:00</GioDen>
+      <MauMaybay>Boeing 737</MauMaybay>
+      <SucChua>160</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>503</MaChuyenBay>
+      <SoHieu>1003</SoHieu>
+      <MaTuyenBay>103</MaTuyenBay>
+      <GioDi>2025-09-29T12:00:00</GioDi>
+      <GioDen>2025-09-29T15:00:00</GioDen>
+      <MauMaybay>Airbus A321</MauMaybay>
+      <SucChua>200</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>504</MaChuyenBay>
+      <SoHieu>1004</SoHieu>
+      <MaTuyenBay>104</MaTuyenBay>
+      <GioDi>2025-09-29T14:00:00</GioDi>
+      <GioDen>2025-09-29T18:00:00</GioDen>
+      <MauMaybay>Boeing 787</MauMaybay>
+      <SucChua>250</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>505</MaChuyenBay>
+      <SoHieu>1005</SoHieu>
+      <MaTuyenBay>105</MaTuyenBay>
+      <GioDi>2025-09-29T16:00:00</GioDi>
+      <GioDen>2025-09-29T19:00:00</GioDen>
+      <MauMaybay>Airbus A350</MauMaybay>
+      <SucChua>300</SucChua>
+    </Flight>
+  </Flights>
+</AirportSystem>

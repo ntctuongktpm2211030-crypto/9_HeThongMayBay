@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airportsystem"
+           xmlns="http://example.com/airportsystem"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_types.xsd"/>
+
+  <xs:complexType name="TuyenBayType">
+    <xs:sequence>
+      <xs:element name="MaTuyenBay" type="IdInt"/>
+      <xs:element name="MaSanBayDi" type="IdInt"/>
+      <xs:element name="MaSanBayDen" type="IdInt"/>
+      <xs:element name="KhoangCach" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

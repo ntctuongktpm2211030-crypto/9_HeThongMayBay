@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/airportsystem"
+           xmlns="http://example.com/airportsystem"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="common_types.xsd"/>
+
+  <xs:complexType name="ChuyenBayType">
+    <xs:sequence>
+      <xs:element name="MaChuyenBay" type="IdInt"/>
+      <xs:element name="SoHieu" type="IdInt"/>
+      <xs:element name="MaTuyenBay" type="IdInt"/>
+      <xs:element name="GioDi" type="xs:dateTime"/>
+      <xs:element name="GioDen" type="xs:dateTime"/>
+      <xs:element name="MauMaybay" type="Varchar100"/>
+      <xs:element name="SucChua" type="IdInt"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
