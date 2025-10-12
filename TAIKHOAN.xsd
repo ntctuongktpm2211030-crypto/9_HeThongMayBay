@@ -48,12 +48,6 @@
       <xs:field xpath="MaTK"/>
     </xs:unique>
 
-    <!-- Unique TenDangNhap -->
-    <xs:unique name="Unique_TaiKhoan_TenDangNhap">
-      <xs:selector xpath="TaiKhoan"/>
-      <xs:field xpath="TenDangNhap"/>
-    </xs:unique>
-
     <!-- Khóa ngoại MaHK tham chiếu HanhKhach.MaHK -->
     <xs:keyref name="FK_TaiKhoan_HanhKhach"
                refer="hk:Unique_HanhKhach_MaHK">

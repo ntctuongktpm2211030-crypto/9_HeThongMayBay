@@ -13,9 +13,10 @@
 - **Cách dùng DTD**:
   - Thêm DOCTYPE vào tài liệu XML tương ứng, ví dụ cho danh sách hành khách:
 ```xml
-<!DOCTYPE DanhSachHanhKhach SYSTEM "HANHKHACH.dtd">
+<!DOCTYPE DanhSachHanhKhach SYSTEM "DTD/HANHKHACH.dtd">
 ```
   - Với tài liệu có nhiều namespace như `test.xml`, DTD không hỗ trợ namespace nên thường tách tài liệu theo từng gốc (`DanhSachHanhKhach`, `DanhSachTaiKhoan`, `DanhSachDatCho`, `DanhSachKiGui`) nếu muốn validate bằng DTD.
+  - **Lưu ý**: Tất cả file DTD đã được di chuyển vào folder `DTD/` để tổ chức tốt hơn.
 
 - **Khuyến nghị**: Tiếp tục dùng XSD để có kiểm tra chặt chẽ. DTD chỉ phù hợp khi cần tính tương thích cũ hoặc yêu cầu rất đơn giản.
 

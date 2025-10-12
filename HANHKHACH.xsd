@@ -2,7 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://example.com/hanhkhach"
            xmlns="http://example.com/hanhkhach"
+           xmlns:hc="http://example.com/airline"
            elementFormDefault="qualified">
+
+  <!-- Import keyairline schema để tham chiếu khóa chính pk_HoChieu -->
+  <xs:import namespace="http://example.com/airline" schemaLocation="airline.xsd"/>
 
   <!-- Kiểu dữ liệu riêng -->
   <xs:simpleType name="EmailType">
@@ -48,6 +52,14 @@
       <xs:selector xpath="HanhKhach"/>
       <xs:field xpath="MaHK"/>
     </xs:unique>
+
+    <!-- Khóa ngoại SoHoChieu tham chiếu HoChieu.SoHoChieu -->
+    <xs:keyref name="FK_HanhKhach_HoChieu"
+               refer="hc:pk_HoChieu">
+      <xs:selector xpath="HanhKhach"/>
+      <xs:field xpath="SoHoChieu"/>
+    </xs:keyref>
   </xs:element>
+
 
 </xs:schema>

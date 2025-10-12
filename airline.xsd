@@ -2,6 +2,8 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://example.com/airline"
            xmlns="http://example.com/airline"
+           xmlns:dc="http://example.com/datcho"
+           xmlns:hk="http://example.com/hanhkhach"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
@@ -10,6 +12,11 @@
   <xs:include schemaLocation="Loaive.xsd"/>
   <xs:include schemaLocation="Chitietve.xsd"/>
   <xs:include schemaLocation="ThongtinKH.xsd"/>
+  
+  <!-- Import DATCHO schema để tham chiếu khóa chính -->
+  <xs:import namespace="http://example.com/datcho" schemaLocation="DATCHO.xsd"/>
+  <!-- Import HANHKHACH schema để tham chiếu khóa chính -->
+  <xs:import namespace="http://example.com/hanhkhach" schemaLocation="HANHKHACH.xsd"/>
 
   <xs:element name="AirlineData">
     <xs:complexType>
@@ -55,19 +62,47 @@
       <xs:field xpath="MaVe"/>
     </xs:key>
 
-    <xs:keyref name="fk_LoaiVe_MaVe" refer="pk_ChiTietVe">
+    <!-- Sửa: LOAIVE nên có khóa chính MaLoaiVe, không phải FK MaVe -->
+    <xs:key name="pk_LoaiVe">
       <xs:selector xpath="LoaiVes/LoaiVe"/>
-      <xs:field xpath="MaVe"/>
-    </xs:keyref>
+      <xs:field xpath="MaLoaiVe"/>
+    </xs:key>
+
+    <!-- Thêm khóa chính cho THONGTINHANHKHACH -->
+    <xs:key name="pk_ThongTinHK">
+      <xs:selector xpath="ThongTinHanhKhachs/ThongTinHanhKhach"/>
+      <xs:field xpath="CCCD"/>
+    </xs:key>
 
     <xs:keyref name="fk_TTHK_MaVe" refer="pk_ChiTietVe">
       <xs:selector xpath="ThongTinHanhKhachs/ThongTinHanhKhach"/>
       <xs:field xpath="MaVe"/>
     </xs:keyref>
 
+
     <xs:keyref name="fk_TTHK_SoHoChieu" refer="pk_HoChieu">
       <xs:selector xpath="ThongTinHanhKhachs/ThongTinHanhKhach"/>
       <xs:field xpath="SoHoChieu"/>
     </xs:keyref>
+
+    <!-- Thêm khóa ngoại: LOAIVE → CHITIETVE (theo cấu trúc hiện tại) -->
+    <xs:keyref name="fk_LoaiVe_MaVe" refer="pk_ChiTietVe">
+      <xs:selector xpath="LoaiVes/LoaiVe"/>
+      <xs:field xpath="MaVe"/>
+    </xs:keyref>
+
+    <!-- Thêm khóa ngoại: CHITIETVE → DATCHO (theo ERD) -->
+    <xs:keyref name="fk_ChiTietVe_MaDatCho" refer="dc:Unique_DatCho_MaDatCho">
+      <xs:selector xpath="ChiTietVes/ChiTietVe"/>
+      <xs:field xpath="MaDatCho"/>
+    </xs:keyref>
+
+    <!-- Thêm khóa ngoại: CHITIETVE → HANHKHACH (theo ERD) -->
+    <xs:keyref name="fk_ChiTietVe_MaHK" refer="hk:Unique_HanhKhach_MaHK">
+      <xs:selector xpath="ChiTietVes/ChiTietVe"/>
+      <xs:field xpath="MaHK"/>
+    </xs:keyref>
+
+
   </xs:element>
 </xs:schema>

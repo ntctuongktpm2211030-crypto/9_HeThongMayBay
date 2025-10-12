@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AirlineSystem SYSTEM "D:\BC_XML\DTD\HTMB.dtd">
+<AirlineSystem xmlns="http://example.com/airline">
+
+  <!-- ========================================================= -->
+  <!-- 1) SÂN BAY - HỆ THỐNG SÂN BAY QUỐC TẾ VÀ NỘI ĐỊA -->
+  <!-- ========================================================= -->
+  <Airports>
+    <Airport>
+      <MaSanBay>SGN</MaSanBay>
+      <TenSanBay>Sân bay Quốc tế Tân Sơn Nhất</TenSanBay>
+      <ThanhPho>Thành phố Hồ Chí Minh</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>SGN</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>HAN</MaSanBay>
+      <TenSanBay>Sân bay Quốc tế Nội Bài</TenSanBay>
+      <ThanhPho>Hà Nội</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>HAN</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>DAD</MaSanBay>
+      <TenSanBay>Sân bay Quốc tế Đà Nẵng</TenSanBay>
+      <ThanhPho>Đà Nẵng</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>DAD</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>PQC</MaSanBay>
+      <TenSanBay>Sân bay Quốc tế Phú Quốc</TenSanBay>
+      <ThanhPho>Phú Quốc</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>PQC</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>CXR</MaSanBay>
+      <TenSanBay>Sân bay Quốc tế Cam Ranh</TenSanBay>
+      <ThanhPho>Nha Trang</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>CXR</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>HUI</MaSanBay>
+      <TenSanBay>Sân bay Phú Bài</TenSanBay>
+      <ThanhPho>Huế</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>HUI</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>VCA</MaSanBay>
+      <TenSanBay>Sân bay Cần Thơ</TenSanBay>
+      <ThanhPho>Cần Thơ</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>VCA</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>VDH</MaSanBay>
+      <TenSanBay>Sân bay Đồng Hới</TenSanBay>
+      <ThanhPho>Quảng Bình</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>VDH</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>VCL</MaSanBay>
+      <TenSanBay>Sân bay Chu Lai</TenSanBay>
+      <ThanhPho>Quảng Nam</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>VCL</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>VII</MaSanBay>
+      <TenSanBay>Sân bay Vinh</TenSanBay>
+      <ThanhPho>Nghệ An</ThanhPho>
+      <QuocGia>Việt Nam</QuocGia>
+      <MaIATA>VII</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>BKK</MaSanBay>
+      <TenSanBay>Suvarnabhumi Airport</TenSanBay>
+      <ThanhPho>Bangkok</ThanhPho>
+      <QuocGia>Thái Lan</QuocGia>
+      <MaIATA>BKK</MaIATA>
+    </Airport>
+    <Airport>
+      <MaSanBay>SIN</MaSanBay>
+      <TenSanBay>Changi Airport</TenSanBay>
+      <ThanhPho>Singapore</ThanhPho>
+      <QuocGia>Singapore</QuocGia>
+      <MaIATA>SIN</MaIATA>
+    </Airport>
+  </Airports>
+
+  <!-- ========================================================= -->
+  <!-- 2) TUYẾN BAY - MẠNG LƯỚI KẾT NỐI CÁC SÂN BAY -->
+  <!-- ========================================================= -->
+  <Routes>
+    <Route>
+      <MaTuyenBay>R001</MaTuyenBay>
+      <MaSanBayDi>SGN</MaSanBayDi>
+      <MaSanBayDen>HAN</MaSanBayDen>
+      <KhoangCach>1150</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R002</MaTuyenBay>
+      <MaSanBayDi>HAN</MaSanBayDi>
+      <MaSanBayDen>DAD</MaSanBayDen>
+      <KhoangCach>600</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R003</MaTuyenBay>
+      <MaSanBayDi>SGN</MaSanBayDi>
+      <MaSanBayDen>PQC</MaSanBayDen>
+      <KhoangCach>305</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R004</MaTuyenBay>
+      <MaSanBayDi>SGN</MaSanBayDi>
+      <MaSanBayDen>CXR</MaSanBayDen>
+      <KhoangCach>308</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R005</MaTuyenBay>
+      <MaSanBayDi>HAN</MaSanBayDi>
+      <MaSanBayDen>PQC</MaSanBayDen>
+      <KhoangCach>1230</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R006</MaTuyenBay>
+      <MaSanBayDi>HAN</MaSanBayDi>
+      <MaSanBayDen>VCA</MaSanBayDen>
+      <KhoangCach>1210</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R007</MaTuyenBay>
+      <MaSanBayDi>DAD</MaSanBayDi>
+      <MaSanBayDen>HUI</MaSanBayDen>
+      <KhoangCach>66</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R008</MaTuyenBay>
+      <MaSanBayDi>SGN</MaSanBayDi>
+      <MaSanBayDen>VDH</MaSanBayDen>
+      <KhoangCach>740</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R009</MaTuyenBay>
+      <MaSanBayDi>SGN</MaSanBayDi>
+      <MaSanBayDen>VII</MaSanBayDen>
+      <KhoangCach>870</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R010</MaTuyenBay>
+      <MaSanBayDi>HAN</MaSanBayDi>
+      <MaSanBayDen>CXR</MaSanBayDen>
+      <KhoangCach>1100</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R011</MaTuyenBay>
+      <MaSanBayDi>SGN</MaSanBayDi>
+      <MaSanBayDen>BKK</MaSanBayDen>
+      <KhoangCach>800</KhoangCach>
+    </Route>
+    <Route>
+      <MaTuyenBay>R012</MaTuyenBay>
+      <MaSanBayDi>HAN</MaSanBayDi>
+      <MaSanBayDen>SIN</MaSanBayDen>
+      <KhoangCach>2200</KhoangCach>
+    </Route>
+  </Routes>
+
+  <!-- ========================================================= -->
+  <!-- 3) CHUYẾN BAY - CÁC CHUYẾN BAY THỰC TẾ -->
+  <!-- ========================================================= -->
+  <Flights>
+    <Flight>
+      <MaChuyenBay>VN123</MaChuyenBay>
+      <SoHieu>VN123</SoHieu>
+      <MaTuyenBay>R001</MaTuyenBay>
+      <MaMayBay>A321</MaMayBay>
+      <GioDi>2025-01-20T08:30:00</GioDi>
+      <GioDen>2025-01-20T10:45:00</GioDen>
+      <MauMaybay>Trắng-Xanh</MauMaybay>
+      <SucChua>180</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VN456</MaChuyenBay>
+      <SoHieu>VN456</SoHieu>
+      <MaTuyenBay>R002</MaTuyenBay>
+      <MaMayBay>A320</MaMayBay>
+      <GioDi>2025-01-21T09:00:00</GioDi>
+      <GioDen>2025-01-21T10:10:00</GioDen>
+      <MauMaybay>Trắng-Đỏ</MauMaybay>
+      <SucChua>170</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VJ201</MaChuyenBay>
+      <SoHieu>VJ201</SoHieu>
+      <MaTuyenBay>R003</MaTuyenBay>
+      <MaMayBay>A321neo</MaMayBay>
+      <GioDi>2025-01-22T07:15:00</GioDi>
+      <GioDen>2025-01-22T08:10:00</GioDen>
+      <MauMaybay>Đỏ-Vàng</MauMaybay>
+      <SucChua>230</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>QH310</MaChuyenBay>
+      <SoHieu>QH310</SoHieu>
+      <MaTuyenBay>R004</MaTuyenBay>
+      <MaMayBay>Embraer190</MaMayBay>
+      <GioDi>2025-01-22T13:20:00</GioDi>
+      <GioDen>2025-01-22T14:25:00</GioDen>
+      <MauMaybay>Xanh-Đỏ</MauMaybay>
+      <SucChua>110</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VN789</MaChuyenBay>
+      <SoHieu>VN789</SoHieu>
+      <MaTuyenBay>R005</MaTuyenBay>
+      <MaMayBay>B787-9</MaMayBay>
+      <GioDi>2025-01-23T06:40:00</GioDi>
+      <GioDen>2025-01-23T08:55:00</GioDen>
+      <MauMaybay>Trắng-Xanh</MauMaybay>
+      <SucChua>274</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VJ345</MaChuyenBay>
+      <SoHieu>VJ345</SoHieu>
+      <MaTuyenBay>R006</MaTuyenBay>
+      <MaMayBay>A321</MaMayBay>
+      <GioDi>2025-01-23T12:10:00</GioDi>
+      <GioDen>2025-01-23T14:20:00</GioDen>
+      <MauMaybay>Đỏ-Vàng</MauMaybay>
+      <SucChua>220</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VN555</MaChuyenBay>
+      <SoHieu>VN555</SoHieu>
+      <MaTuyenBay>R007</MaTuyenBay>
+      <MaMayBay>ATR72</MaMayBay>
+      <GioDi>2025-01-24T10:00:00</GioDi>
+      <GioDen>2025-01-24T10:25:00</GioDen>
+      <MauMaybay>Trắng-Xanh</MauMaybay>
+      <SucChua>68</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>QH611</MaChuyenBay>
+      <SoHieu>QH611</SoHieu>
+      <MaTuyenBay>R008</MaTuyenBay>
+      <MaMayBay>A320</MaMayBay>
+      <GioDi>2025-01-24T15:30:00</GioDi>
+      <GioDen>2025-01-24T16:50:00</GioDen>
+      <MauMaybay>Xanh-Đỏ</MauMaybay>
+      <SucChua>160</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VJ512</MaChuyenBay>
+      <SoHieu>VJ512</SoHieu>
+      <MaTuyenBay>R009</MaTuyenBay>
+      <MaMayBay>A321</MaMayBay>
+      <GioDi>2025-01-25T11:05:00</GioDi>
+      <GioDen>2025-01-25T12:45:00</GioDen>
+      <MauMaybay>Đỏ-Vàng</MauMaybay>
+      <SucChua>220</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VN902</MaChuyenBay>
+      <SoHieu>VN902</SoHieu>
+      <MaTuyenBay>R010</MaTuyenBay>
+      <MaMayBay>A350-900</MaMayBay>
+      <GioDi>2025-01-25T17:20:00</GioDi>
+      <GioDen>2025-01-25T19:10:00</GioDen>
+      <MauMaybay>Trắng-Xanh</MauMaybay>
+      <SucChua>305</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VN301</MaChuyenBay>
+      <SoHieu>VN301</SoHieu>
+      <MaTuyenBay>R011</MaTuyenBay>
+      <MaMayBay>A350-900</MaMayBay>
+      <GioDi>2025-01-26T14:00:00</GioDi>
+      <GioDen>2025-01-26T16:30:00</GioDen>
+      <MauMaybay>Trắng-Xanh</MauMaybay>
+      <SucChua>305</SucChua>
+    </Flight>
+    <Flight>
+      <MaChuyenBay>VN502</MaChuyenBay>
+      <SoHieu>VN502</SoHieu>
+      <MaTuyenBay>R012</MaTuyenBay>
+      <MaMayBay>B787-9</MaMayBay>
+      <GioDi>2025-01-27T20:15:00</GioDi>
+      <GioDen>2025-01-28T01:45:00</GioDen>
+      <MauMaybay>Trắng-Xanh</MauMaybay>
+      <SucChua>274</SucChua>
+    </Flight>
+  </Flights>
+
+  <!-- ========================================================= -->
+  <!-- 4) HÀNH KHÁCH - THÔNG TIN KHÁCH HÀNG -->
+  <!-- ========================================================= -->
+  <DanhSachHanhKhach>
+    <HanhKhach>
+      <MaHK>HK001</MaHK>
+      <HoTen>Nguyễn Văn An</HoTen>
+      <NgaySinh>1990-05-12</NgaySinh>
+      <Email>nguyen.van.an@gmail.com</Email>
+      <DienThoai>0909123456</DienThoai>
+      <SoHoChieu>P12345678</SoHoChieu>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK002</MaHK>
+      <HoTen>Trần Thị Bình</HoTen>
+      <NgaySinh>1995-08-20</NgaySinh>
+      <Email>tran.thi.binh@yahoo.com</Email>
+      <DienThoai>0912345678</DienThoai>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK003</MaHK>
+      <HoTen>Lê Minh Cường</HoTen>
+      <NgaySinh>1988-03-02</NgaySinh>
+      <Email>le.minh.cuong@outlook.com</Email>
+      <DienThoai>0933111222</DienThoai>
+      <SoHoChieu>P87654321</SoHoChieu>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK004</MaHK>
+      <HoTen>Phạm Thu Dung</HoTen>
+      <NgaySinh>1992-11-11</NgaySinh>
+      <Email>pham.thu.dung@gmail.com</Email>
+      <DienThoai>0988888777</DienThoai>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK005</MaHK>
+      <HoTen>Võ Quốc Em</HoTen>
+      <NgaySinh>1999-07-30</NgaySinh>
+      <Email>vo.quoc.em@hotmail.com</Email>
+      <DienThoai>0907000111</DienThoai>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK006</MaHK>
+      <HoTen>Đỗ Hải Phong</HoTen>
+      <NgaySinh>1985-01-15</NgaySinh>
+      <Email>do.hai.phong@gmail.com</Email>
+      <DienThoai>0903456789</DienThoai>
+      <SoHoChieu>P11223344</SoHoChieu>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK007</MaHK>
+      <HoTen>Ngô Gia Hưng</HoTen>
+      <NgaySinh>2000-12-09</NgaySinh>
+      <Email>ngo.gia.hung@student.edu.vn</Email>
+      <DienThoai>0977123456</DienThoai>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK008</MaHK>
+      <HoTen>Bùi Anh Hùng</HoTen>
+      <NgaySinh>1994-04-25</NgaySinh>
+      <Email>bui.anh.hung@company.com</Email>
+      <DienThoai>0966778899</DienThoai>
+      <SoHoChieu>P44332211</SoHoChieu>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK009</MaHK>
+      <HoTen>Huỳnh Thúy Linh</HoTen>
+      <NgaySinh>1997-09-18</NgaySinh>
+      <Email>huynh.thuy.linh@gmail.com</Email>
+      <DienThoai>0922333444</DienThoai>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK010</MaHK>
+      <HoTen>Trương Minh Khang</HoTen>
+      <NgaySinh>1987-06-06</NgaySinh>
+      <Email>truong.minh.khang@business.vn</Email>
+      <DienThoai>0911999777</DienThoai>
+      <SoHoChieu>P55667788</SoHoChieu>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK011</MaHK>
+      <HoTen>Lý Thị Mai</HoTen>
+      <NgaySinh>1993-02-14</NgaySinh>
+      <Email>ly.thi.mai@yahoo.com</Email>
+      <DienThoai>0944555666</DienThoai>
+      <SoHoChieu>P99887766</SoHoChieu>
+    </HanhKhach>
+    <HanhKhach>
+      <MaHK>HK012</MaHK>
+      <HoTen>Hoàng Văn Nam</HoTen>
+      <NgaySinh>1989-10-08</NgaySinh>
+      <Email>hoang.van.nam@gmail.com</Email>
+      <DienThoai>0933444555</DienThoai>
+    </HanhKhach>
+  </DanhSachHanhKhach>
+
+  <!-- ========================================================= -->
+  <!-- 5) TÀI KHOẢN - HỆ THỐNG ĐĂNG NHẬP -->
+  <!-- ========================================================= -->
+  <DanhSachTaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK001</MaTK>
+      <TenDangNhap>nguyen.van.an</TenDangNhap>
+      <MatKhau>An123456!</MatKhau>
+      <MaHK>HK001</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK002</MaTK>
+      <TenDangNhap>tran.thi.binh</TenDangNhap>
+      <MatKhau>Binh@2024</MatKhau>
+      <MaHK>HK002</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK003</MaTK>
+      <TenDangNhap>le.minh.cuong</TenDangNhap>
+      <MatKhau>Cuong88#</MatKhau>
+      <MaHK>HK003</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK004</MaTK>
+      <TenDangNhap>pham.thu.dung</TenDangNhap>
+      <MatKhau>Dung92$</MatKhau>
+      <MaHK>HK004</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK005</MaTK>
+      <TenDangNhap>vo.quoc.em</TenDangNhap>
+      <MatKhau>Em99!</MatKhau>
+      <MaHK>HK005</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK006</MaTK>
+      <TenDangNhap>do.hai.phong</TenDangNhap>
+      <MatKhau>Phong85@</MatKhau>
+      <MaHK>HK006</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK007</MaTK>
+      <TenDangNhap>ngo.gia.hung</TenDangNhap>
+      <MatKhau>Hung00#</MatKhau>
+      <MaHK>HK007</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK008</MaTK>
+      <TenDangNhap>bui.anh.hung</TenDangNhap>
+      <MatKhau>Hung94$</MatKhau>
+      <MaHK>HK008</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK009</MaTK>
+      <TenDangNhap>huynh.thuy.linh</TenDangNhap>
+      <MatKhau>Linh97!</MatKhau>
+      <MaHK>HK009</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK010</MaTK>
+      <TenDangNhap>truong.minh.khang</TenDangNhap>
+      <MatKhau>Khang87@</MatKhau>
+      <MaHK>HK010</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK011</MaTK>
+      <TenDangNhap>ly.thi.mai</TenDangNhap>
+      <MatKhau>Mai93#</MatKhau>
+      <MaHK>HK011</MaHK>
+    </TaiKhoan>
+    <TaiKhoan>
+      <MaTK>TK012</MaTK>
+      <TenDangNhap>hoang.van.nam</TenDangNhap>
+      <MatKhau>Nam89$</MatKhau>
+      <MaHK>HK012</MaHK>
+    </TaiKhoan>
+  </DanhSachTaiKhoan>
+
+  <!-- ========================================================= -->
+  <!-- 6) ĐẶT CHỖ - QUẢN LÝ BOOKING -->
+  <!-- ========================================================= -->
+  <DanhSachDatCho>
+    <DatCho>
+      <MaDC>DC001</MaDC>
+      <MaTK>TK001</MaTK>
+      <MaChuyenBay>VN123</MaChuyenBay>
+      <MaKiGui>KG001</MaKiGui>
+      <MaPNR>PNR001</MaPNR>
+      <NgayDat>2025-01-10</NgayDat>
+      <TrangThai>Đã xác nhận</TrangThai>
+      <TongTien>2500000</TongTien>
+      <ThoiHanGiuCho>2025-01-15</ThoiHanGiuCho>
+      <PhuongThucTT>Thẻ tín dụng</PhuongThucTT>
+      <GhiChu>Yêu cầu ghế cửa sổ, bữa ăn chay</GhiChu>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC002</MaDC>
+      <MaTK>TK002</MaTK>
+      <MaChuyenBay>VN456</MaChuyenBay>
+      <MaPNR>PNR002</MaPNR>
+      <NgayDat>2025-01-11</NgayDat>
+      <TrangThai>Đã thanh toán</TrangThai>
+      <TongTien>1800000</TongTien>
+      <ThoiHanGiuCho>2025-01-16</ThoiHanGiuCho>
+      <PhuongThucTT>Ví điện tử</PhuongThucTT>
+      <GhiChu>Hành khách có trẻ em</GhiChu>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC003</MaDC>
+      <MaTK>TK003</MaTK>
+      <MaChuyenBay>VJ201</MaChuyenBay>
+      <MaKiGui>KG003</MaKiGui>
+      <MaPNR>PNR003</MaPNR>
+      <NgayDat>2025-01-12</NgayDat>
+      <TrangThai>Chờ thanh toán</TrangThai>
+      <TongTien>1500000</TongTien>
+      <ThoiHanGiuCho>2025-01-17</ThoiHanGiuCho>
+      <PhuongThucTT>Chuyển khoản</PhuongThucTT>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC004</MaDC>
+      <MaTK>TK004</MaTK>
+      <MaChuyenBay>QH310</MaChuyenBay>
+      <MaPNR>PNR004</MaPNR>
+      <NgayDat>2025-01-12</NgayDat>
+      <TrangThai>Đã xác nhận</TrangThai>
+      <TongTien>1200000</TongTien>
+      <ThoiHanGiuCho>2025-01-17</ThoiHanGiuCho>
+      <PhuongThucTT>Thẻ ghi nợ</PhuongThucTT>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC005</MaDC>
+      <MaTK>TK005</MaTK>
+      <MaChuyenBay>VN789</MaChuyenBay>
+      <MaKiGui>KG005</MaKiGui>
+      <MaPNR>PNR005</MaPNR>
+      <NgayDat>2025-01-13</NgayDat>
+      <TrangThai>Đã thanh toán</TrangThai>
+      <TongTien>3200000</TongTien>
+      <ThoiHanGiuCho>2025-01-18</ThoiHanGiuCho>
+      <PhuongThucTT>Thẻ tín dụng</PhuongThucTT>
+      <GhiChu>Hạng thương gia, bữa ăn đặc biệt</GhiChu>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC006</MaDC>
+      <MaTK>TK006</MaTK>
+      <MaChuyenBay>VJ345</MaChuyenBay>
+      <MaPNR>PNR006</MaPNR>
+      <NgayDat>2025-01-13</NgayDat>
+      <TrangThai>Hủy</TrangThai>
+      <TongTien>0</TongTien>
+      <ThoiHanGiuCho>2025-01-18</ThoiHanGiuCho>
+      <PhuongThucTT>—</PhuongThucTT>
+      <GhiChu>Hủy theo yêu cầu khách hàng</GhiChu>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC007</MaDC>
+      <MaTK>TK007</MaTK>
+      <MaChuyenBay>VN555</MaChuyenBay>
+      <MaKiGui>KG007</MaKiGui>
+      <MaPNR>PNR007</MaPNR>
+      <NgayDat>2025-01-14</NgayDat>
+      <TrangThai>Đã xác nhận</TrangThai>
+      <TongTien>900000</TongTien>
+      <ThoiHanGiuCho>2025-01-19</ThoiHanGiuCho>
+      <PhuongThucTT>Tiền mặt</PhuongThucTT>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC008</MaDC>
+      <MaTK>TK008</MaTK>
+      <MaChuyenBay>QH611</MaChuyenBay>
+      <MaPNR>PNR008</MaPNR>
+      <NgayDat>2025-01-14</NgayDat>
+      <TrangThai>Đã thanh toán</TrangThai>
+      <TongTien>1700000</TongTien>
+      <ThoiHanGiuCho>2025-01-19</ThoiHanGiuCho>
+      <PhuongThucTT>Ví điện tử</PhuongThucTT>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC009</MaDC>
+      <MaTK>TK009</MaTK>
+      <MaChuyenBay>VJ512</MaChuyenBay>
+      <MaPNR>PNR009</MaPNR>
+      <NgayDat>2025-01-15</NgayDat>
+      <TrangThai>Đã xác nhận</TrangThai>
+      <TongTien>2100000</TongTien>
+      <ThoiHanGiuCho>2025-01-20</ThoiHanGiuCho>
+      <PhuongThucTT>Thẻ ghi nợ</PhuongThucTT>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC010</MaDC>
+      <MaTK>TK010</MaTK>
+      <MaChuyenBay>VN902</MaChuyenBay>
+      <MaKiGui>KG010</MaKiGui>
+      <MaPNR>PNR010</MaPNR>
+      <NgayDat>2025-01-16</NgayDat>
+      <TrangThai>Đã thanh toán</TrangThai>
+      <TongTien>3500000</TongTien>
+      <ThoiHanGiuCho>2025-01-21</ThoiHanGiuCho>
+      <PhuongThucTT>Thẻ tín dụng</PhuongThucTT>
+      <GhiChu>Hạng thương gia, dịch vụ đặc biệt</GhiChu>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC011</MaDC>
+      <MaTK>TK011</MaTK>
+      <MaChuyenBay>VN301</MaChuyenBay>
+      <MaKiGui>KG011</MaKiGui>
+      <MaPNR>PNR011</MaPNR>
+      <NgayDat>2025-01-17</NgayDat>
+      <TrangThai>Đã thanh toán</TrangThai>
+      <TongTien>2800000</TongTien>
+      <ThoiHanGiuCho>2025-01-22</ThoiHanGiuCho>
+      <PhuongThucTT>Chuyển khoản</PhuongThucTT>
+      <GhiChu>Chuyến bay quốc tế</GhiChu>
+    </DatCho>
+    <DatCho>
+      <MaDC>DC012</MaDC>
+      <MaTK>TK012</MaTK>
+      <MaChuyenBay>VN502</MaChuyenBay>
+      <MaKiGui>KG012</MaKiGui>
+      <MaPNR>PNR012</MaPNR>
+      <NgayDat>2025-01-18</NgayDat>
+      <TrangThai>Đã xác nhận</TrangThai>
+      <TongTien>4200000</TongTien>
+      <ThoiHanGiuCho>2025-01-23</ThoiHanGiuCho>
+      <PhuongThucTT>Thẻ tín dụng</PhuongThucTT>
+      <GhiChu>Chuyến bay quốc tế dài, hạng thương gia</GhiChu>
+    </DatCho>
+  </DanhSachDatCho>
+
+  <!-- ========================================================= -->
+  <!-- 7) KÝ GỬI HÀNH LÝ - DỊCH VỤ BAGGAGE -->
+  <!-- ========================================================= -->
+  <DanhSachKiGui>
+    <KiGui>
+      <MaKG>KG001</MaKG>
+      <SoKiGui>20kg</SoKiGui>
+      <ThanhToan>500000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG002</MaKG>
+      <SoKiGui>15kg</SoKiGui>
+      <ThanhToan>350000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG003</MaKG>
+      <SoKiGui>23kg</SoKiGui>
+      <ThanhToan>550000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG004</MaKG>
+      <SoKiGui>10kg</SoKiGui>
+      <ThanhToan>200000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG005</MaKG>
+      <SoKiGui>30kg</SoKiGui>
+      <ThanhToan>700000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG006</MaKG>
+      <SoKiGui>18kg</SoKiGui>
+      <ThanhToan>420000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG007</MaKG>
+      <SoKiGui>12kg</SoKiGui>
+      <ThanhToan>250000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG008</MaKG>
+      <SoKiGui>25kg</SoKiGui>
+      <ThanhToan>600000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG009</MaKG>
+      <SoKiGui>28kg</SoKiGui>
+      <ThanhToan>650000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG010</MaKG>
+      <SoKiGui>22kg</SoKiGui>
+      <ThanhToan>520000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG011</MaKG>
+      <SoKiGui>32kg</SoKiGui>
+      <ThanhToan>800000</ThanhToan>
+    </KiGui>
+    <KiGui>
+      <MaKG>KG012</MaKG>
+      <SoKiGui>35kg</SoKiGui>
+      <ThanhToan>900000</ThanhToan>
+    </KiGui>
+  </DanhSachKiGui>
+
+  <!-- ========================================================= -->
+  <!-- 8) HỘ CHIẾU - THÔNG TIN PASSPORT -->
+  <!-- ========================================================= -->
+  <HoChieus>
+    <HoChieu>
+      <SoHoChieu>P12345678</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2020-06-01</NgayCap>
+      <NgayHetHan>2030-06-01</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P87654321</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2019-09-15</NgayCap>
+      <NgayHetHan>2029-09-15</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P11223344</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2018-01-10</NgayCap>
+      <NgayHetHan>2028-01-10</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P44332211</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2021-04-20</NgayCap>
+      <NgayHetHan>2031-04-20</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P55667788</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2017-07-07</NgayCap>
+      <NgayHetHan>2027-07-07</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P99887766</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2020-12-12</NgayCap>
+      <NgayHetHan>2030-12-12</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P33445566</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2016-02-02</NgayCap>
+      <NgayHetHan>2026-02-02</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P22113344</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2019-03-03</NgayCap>
+      <NgayHetHan>2029-03-03</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P77889900</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2022-05-05</NgayCap>
+      <NgayHetHan>2032-05-05</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+    <HoChieu>
+      <SoHoChieu>P00998877</SoHoChieu>
+      <QuocTich>Việt Nam</QuocTich>
+      <NgayCap>2015-08-18</NgayCap>
+      <NgayHetHan>2025-08-18</NgayHetHan>
+      <NuocCap>Việt Nam</NuocCap>
+    </HoChieu>
+  </HoChieus>
+
+  <!-- ========================================================= -->
+  <!-- 9) LOẠI VÉ - PHÂN LOẠI GIÁ VÉ -->
+  <!-- ========================================================= -->
+  <LoaiVes>
+    <LoaiVe>
+      <MaLoaiVe>LV01</MaLoaiVe>
+      <MaVe>VE001</MaVe>
+      <TenLoaiVe>Phổ thông tiết kiệm</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV02</MaLoaiVe>
+      <MaVe>VE002</MaVe>
+      <TenLoaiVe>Phổ thông tiêu chuẩn</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV03</MaLoaiVe>
+      <MaVe>VE003</MaVe>
+      <TenLoaiVe>Phổ thông linh hoạt</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV04</MaLoaiVe>
+      <MaVe>VE004</MaVe>
+      <TenLoaiVe>Phổ thông tiết kiệm</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV05</MaLoaiVe>
+      <MaVe>VE005</MaVe>
+      <TenLoaiVe>Thương gia tiêu chuẩn</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV06</MaLoaiVe>
+      <MaVe>VE006</MaVe>
+      <TenLoaiVe>Phổ thông tiết kiệm</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV07</MaLoaiVe>
+      <MaVe>VE007</MaVe>
+      <TenLoaiVe>Phổ thông tiêu chuẩn</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV08</MaLoaiVe>
+      <MaVe>VE008</MaVe>
+      <TenLoaiVe>Phổ thông linh hoạt</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV09</MaLoaiVe>
+      <MaVe>VE009</MaVe>
+      <TenLoaiVe>Phổ thông tiêu chuẩn</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV10</MaLoaiVe>
+      <MaVe>VE010</MaVe>
+      <TenLoaiVe>Thương gia tiêu chuẩn</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV11</MaLoaiVe>
+      <MaVe>VE011</MaVe>
+      <TenLoaiVe>Thương gia quốc tế</TenLoaiVe>
+    </LoaiVe>
+    <LoaiVe>
+      <MaLoaiVe>LV12</MaLoaiVe>
+      <MaVe>VE012</MaVe>
+      <TenLoaiVe>Hạng nhất quốc tế</TenLoaiVe>
+    </LoaiVe>
+  </LoaiVes>
+
+  <!-- ========================================================= -->
+  <!-- 10) CHI TIẾT VÉ - THÔNG TIN VÉ CỤ THỂ -->
+  <!-- ========================================================= -->
+  <ChiTietVes>
+    <ChiTietVe>
+      <MaVe>VE001</MaVe>
+      <MaDatCho>DC001</MaDatCho>
+      <MaHK>HK001</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>12A</SoGhe>
+      <GiaTien>2500000</GiaTien>
+      <ThanhTien>2500000</ThanhTien>
+      <TrangThai>Đã thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE002</MaVe>
+      <MaDatCho>DC002</MaDatCho>
+      <MaHK>HK002</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>15B</SoGhe>
+      <GiaTien>1800000</GiaTien>
+      <ThanhTien>1800000</ThanhTien>
+      <TrangThai>Đã thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE003</MaVe>
+      <MaDatCho>DC003</MaDatCho>
+      <MaHK>HK003</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>18F</SoGhe>
+      <GiaTien>1500000</GiaTien>
+      <ThanhTien>1500000</ThanhTien>
+      <TrangThai>Chờ thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE004</MaVe>
+      <MaDatCho>DC004</MaDatCho>
+      <MaHK>HK004</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>7B</SoGhe>
+      <GiaTien>1200000</GiaTien>
+      <ThanhTien>1200000</ThanhTien>
+      <TrangThai>Đã xác nhận</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE005</MaVe>
+      <MaDatCho>DC005</MaDatCho>
+      <MaHK>HK005</MaHK>
+      <HangGhe>Business</HangGhe>
+      <SoGhe>3A</SoGhe>
+      <GiaTien>3200000</GiaTien>
+      <ThanhTien>3200000</ThanhTien>
+      <TrangThai>Đã thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE006</MaVe>
+      <MaDatCho>DC006</MaDatCho>
+      <MaHK>HK006</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>19C</SoGhe>
+      <GiaTien>0</GiaTien>
+      <ThanhTien>0</ThanhTien>
+      <TrangThai>Hủy</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE007</MaVe>
+      <MaDatCho>DC007</MaDatCho>
+      <MaHK>HK007</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>5D</SoGhe>
+      <GiaTien>900000</GiaTien>
+      <ThanhTien>900000</ThanhTien>
+      <TrangThai>Đã xác nhận</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE008</MaVe>
+      <MaDatCho>DC008</MaDatCho>
+      <MaHK>HK008</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>14E</SoGhe>
+      <GiaTien>1700000</GiaTien>
+      <ThanhTien>1700000</ThanhTien>
+      <TrangThai>Đã thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE009</MaVe>
+      <MaDatCho>DC009</MaDatCho>
+      <MaHK>HK009</MaHK>
+      <HangGhe>Economy</HangGhe>
+      <SoGhe>21A</SoGhe>
+      <GiaTien>2100000</GiaTien>
+      <ThanhTien>2100000</ThanhTien>
+      <TrangThai>Đã xác nhận</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE010</MaVe>
+      <MaDatCho>DC010</MaDatCho>
+      <MaHK>HK010</MaHK>
+      <HangGhe>Business</HangGhe>
+      <SoGhe>1F</SoGhe>
+      <GiaTien>3500000</GiaTien>
+      <ThanhTien>3500000</ThanhTien>
+      <TrangThai>Đã thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE011</MaVe>
+      <MaDatCho>DC011</MaDatCho>
+      <MaHK>HK011</MaHK>
+      <HangGhe>Business</HangGhe>
+      <SoGhe>2C</SoGhe>
+      <GiaTien>2800000</GiaTien>
+      <ThanhTien>2800000</ThanhTien>
+      <TrangThai>Đã thanh toán</TrangThai>
+    </ChiTietVe>
+    <ChiTietVe>
+      <MaVe>VE012</MaVe>
+      <MaDatCho>DC012</MaDatCho>
+      <MaHK>HK012</MaHK>
+      <HangGhe>First</HangGhe>
+      <SoGhe>1A</SoGhe>
+      <GiaTien>4200000</GiaTien>
+      <ThanhTien>4200000</ThanhTien>
+      <TrangThai>Đã xác nhận</TrangThai>
+    </ChiTietVe>
+  </ChiTietVes>
+
+  <!-- ========================================================= -->
+  <!-- 11) THÔNG TIN HÀNH KHÁCH - CHI TIẾT CHECK-IN -->
+  <!-- ========================================================= -->
+  <ThongTinHanhKhachs>
+    <ThongTinHanhKhach>
+      <CCCD>012345678901</CCCD>
+      <MaVe>VE001</MaVe>
+      <SoHoChieu>P12345678</SoHoChieu>
+      <HoTen>Nguyễn Văn An</HoTen>
+      <SoDienThoai>0909123456</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>079123456789</CCCD>
+      <MaVe>VE002</MaVe>
+      <SoHoChieu>N/A</SoHoChieu>
+      <HoTen>Trần Thị Bình</HoTen>
+      <SoDienThoai>0912345678</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>036987654321</CCCD>
+      <MaVe>VE003</MaVe>
+      <SoHoChieu>P87654321</SoHoChieu>
+      <HoTen>Lê Minh Cường</HoTen>
+      <SoDienThoai>0933111222</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>094556677889</CCCD>
+      <MaVe>VE004</MaVe>
+      <SoHoChieu>N/A</SoHoChieu>
+      <HoTen>Phạm Thu Dung</HoTen>
+      <SoDienThoai>0988888777</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>091000222333</CCCD>
+      <MaVe>VE005</MaVe>
+      <SoHoChieu>N/A</SoHoChieu>
+      <HoTen>Võ Quốc Em</HoTen>
+      <SoDienThoai>0907000111</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>082345667799</CCCD>
+      <MaVe>VE006</MaVe>
+      <SoHoChieu>P11223344</SoHoChieu>
+      <HoTen>Đỗ Hải Phong</HoTen>
+      <SoDienThoai>0903456789</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>086112233445</CCCD>
+      <MaVe>VE007</MaVe>
+      <SoHoChieu>N/A</SoHoChieu>
+      <HoTen>Ngô Gia Hưng</HoTen>
+      <SoDienThoai>0977123456</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>084998877665</CCCD>
+      <MaVe>VE008</MaVe>
+      <SoHoChieu>P44332211</SoHoChieu>
+      <HoTen>Bùi Anh Hùng</HoTen>
+      <SoDienThoai>0966778899</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>089556644332</CCCD>
+      <MaVe>VE009</MaVe>
+      <SoHoChieu>N/A</SoHoChieu>
+      <HoTen>Huỳnh Thúy Linh</HoTen>
+      <SoDienThoai>0922333444</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>090110022003</CCCD>
+      <MaVe>VE010</MaVe>
+      <SoHoChieu>P55667788</SoHoChieu>
+      <HoTen>Trương Minh Khang</HoTen>
+      <SoDienThoai>0911999777</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>092345678901</CCCD>
+      <MaVe>VE011</MaVe>
+      <SoHoChieu>P99887766</SoHoChieu>
+      <HoTen>Lý Thị Mai</HoTen>
+      <SoDienThoai>0944555666</SoDienThoai>
+    </ThongTinHanhKhach>
+    <ThongTinHanhKhach>
+      <CCCD>088765432109</CCCD>
+      <MaVe>VE012</MaVe>
+      <SoHoChieu>N/A</SoHoChieu>
+      <HoTen>Hoàng Văn Nam</HoTen>
+      <SoDienThoai>0933444555</SoDienThoai>
+    </ThongTinHanhKhach>
+  </ThongTinHanhKhachs>
+
+</AirlineSystem>

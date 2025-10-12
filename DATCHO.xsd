@@ -3,11 +3,20 @@
            targetNamespace="http://example.com/datcho"
            xmlns="http://example.com/datcho"
            xmlns:hk="http://example.com/hanhkhach"
+           xmlns:tk="http://example.com/taikhoan"
+           xmlns:kg="http://example.com/kigui"
+           xmlns:airport="http://example.com/airportsystem"
            elementFormDefault="qualified">
 
-  <!-- Import schema HanhKhach -->
+  <!-- Import schemas -->
   <xs:import namespace="http://example.com/hanhkhach"
              schemaLocation="HANHKHACH.xsd"/>
+  <xs:import namespace="http://example.com/taikhoan"
+             schemaLocation="TAIKHOAN.xsd"/>
+  <xs:import namespace="http://example.com/kigui"
+             schemaLocation="KIGUI.xsd"/>
+  <xs:import namespace="http://example.com/airportsystem"
+             schemaLocation="AirportSystem.xsd"/>
 
   <!-- Kiểu dữ liệu riêng -->
   <xs:simpleType name="TrangThaiDatChoType">
@@ -25,11 +34,16 @@
         <xs:element name="DatCho" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaDC" type="xs:integer"/>
-              <xs:element name="MaHK" type="xs:integer"/>
+              <xs:element name="MaDatCho" type="xs:integer"/>
+              <xs:element name="MaTK" type="xs:integer"/>
+              <xs:element name="MaChuyenBay" type="xs:integer"/>
+              <xs:element name="MaKiGui" type="xs:integer"/>
+              <xs:element name="MaPNR" type="xs:string"/>
               <xs:element name="NgayDat" type="xs:date"/>
-              <xs:element name="SoGhe" type="xs:integer" minOccurs="0"/>
               <xs:element name="TrangThai" type="TrangThaiDatChoType"/>
+              <xs:element name="TongTien" type="xs:decimal"/>
+              <xs:element name="ThoiHanGiuCho" type="xs:dateTime"/>
+              <xs:element name="PhuongThucTT" type="xs:string"/>
               <xs:element name="GhiChu" type="xs:string" minOccurs="0"/>
             </xs:sequence>
           </xs:complexType>
@@ -37,17 +51,31 @@
       </xs:sequence>
     </xs:complexType>
 
-    <!-- Unique MaDC -->
-    <xs:unique name="Unique_DatCho_MaDC">
+    <!-- Unique MaDatCho -->
+    <xs:unique name="Unique_DatCho_MaDatCho">
       <xs:selector xpath="DatCho"/>
-      <xs:field xpath="MaDC"/>
+      <xs:field xpath="MaDatCho"/>
     </xs:unique>
 
-    <!-- Khóa ngoại MaHK tham chiếu HanhKhach.MaHK -->
-    <xs:keyref name="FK_DatCho_HanhKhach"
-               refer="hk:Unique_HanhKhach_MaHK">
+    <!-- Khóa ngoại MaTK tham chiếu TaiKhoan.MaTK -->
+    <xs:keyref name="FK_DatCho_TaiKhoan"
+               refer="tk:Unique_TaiKhoan_MaTK">
       <xs:selector xpath="DatCho"/>
-      <xs:field xpath="MaHK"/>
+      <xs:field xpath="MaTK"/>
+    </xs:keyref>
+
+    <!-- Khóa ngoại MaChuyenBay tham chiếu ChuyenBay.MaChuyenBay -->
+    <xs:keyref name="FK_DatCho_ChuyenBay"
+               refer="airport:pk_ChuyenBay">
+      <xs:selector xpath="DatCho"/>
+      <xs:field xpath="MaChuyenBay"/>
+    </xs:keyref>
+
+    <!-- Khóa ngoại MaKiGui tham chiếu KiGui.MaKiGui -->
+    <xs:keyref name="FK_DatCho_KiGui"
+               refer="kg:Unique_KiGui_MaKiGui">
+      <xs:selector xpath="DatCho"/>
+      <xs:field xpath="MaKiGui"/>
     </xs:keyref>
   </xs:element>
 

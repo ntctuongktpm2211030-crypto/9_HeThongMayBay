@@ -2,12 +2,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://example.com/kigui"
            xmlns="http://example.com/kigui"
-           xmlns:hk="http://example.com/hanhkhach"
            elementFormDefault="qualified">
 
-  <!-- Import schema HanhKhach -->
-  <xs:import namespace="http://example.com/hanhkhach"
-             schemaLocation="HANHKHACH.xsd"/>
+
 
   <!-- Kiểu dữ liệu riêng -->
   <xs:simpleType name="TrangThaiKiGuiType">
@@ -25,32 +22,20 @@
         <xs:element name="KiGui" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaKG" type="xs:integer"/>
-              <xs:element name="MaHK" type="xs:integer"/>
-              <xs:element name="SoHieuHanhLy" type="xs:string"/>
-              <xs:element name="TrongLuongKg" type="xs:decimal"/>
-              <xs:element name="TrangThai" type="TrangThaiKiGuiType"/>
-              <xs:element name="NgayGui" type="xs:date"/>
-              <xs:element name="NgayNhan" type="xs:date" minOccurs="0"/>
-              <xs:element name="GhiChu" type="xs:string" minOccurs="0"/>
+              <xs:element name="MaKiGui" type="xs:integer"/>            
+              <xs:element name="SoKiGui" type="xs:decimal"/>
+              <xs:element name="ThanhToan" type="xs:decimal"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
-
-    <!-- Unique MaKG -->
-    <xs:unique name="Unique_KiGui_MaKG">
+    <!-- Unique MaKiGui -->
+    <xs:unique name="Unique_KiGui_MaKiGui">
       <xs:selector xpath="KiGui"/>
-      <xs:field xpath="MaKG"/>
+      <xs:field xpath="MaKiGui"/>
     </xs:unique>
 
-    <!-- Khóa ngoại MaHK tham chiếu HanhKhach.MaHK -->
-    <xs:keyref name="FK_KiGui_HanhKhach"
-               refer="hk:Unique_HanhKhach_MaHK">
-      <xs:selector xpath="KiGui"/>
-      <xs:field xpath="MaHK"/>
-    </xs:keyref>
   </xs:element>
 
 </xs:schema>

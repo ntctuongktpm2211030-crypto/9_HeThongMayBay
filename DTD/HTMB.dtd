@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================== -->
+<!-- DTD TỔNG HỢP HỆ THỐNG HÀNG KHÔNG -->
+<!-- Gộp tất cả module với kiểu trình bày thống nhất -->
+<!-- ========================================== -->
+
+<!-- ========================================== -->
+<!-- ROOT ELEMENT -->
+<!-- ========================================== -->
+<!ELEMENT AirlineSystem (Airports, Routes, Flights, DanhSachHanhKhach, DanhSachTaiKhoan, DanhSachDatCho, DanhSachKiGui, HoChieus, LoaiVes, ChiTietVes, ThongTinHanhKhachs)>
+
+
+<!-- MODULE 1: HỆ THỐNG SÂN BAY VÀ TUYẾN BAY -->
+
+<!-- Sân bay -->
+<!ELEMENT Airports (Airport+)>
+<!ELEMENT Airport (MaSanBay, TenSanBay, ThanhPho, QuocGia, MaIATA)>
+<!ELEMENT MaSanBay (#PCDATA)>
+<!ELEMENT TenSanBay (#PCDATA)>
+<!ELEMENT ThanhPho (#PCDATA)>
+<!ELEMENT QuocGia (#PCDATA)>
+<!ELEMENT MaIATA (#PCDATA)>
+
+<!-- Tuyến bay -->
+<!ELEMENT Routes (Route+)>
+<!ELEMENT Route (MaTuyenBay, MaSanBayDi, MaSanBayDen, KhoangCach)>
+<!ELEMENT MaTuyenBay (#PCDATA)>
+<!ELEMENT MaSanBayDi (#PCDATA)>
+<!ELEMENT MaSanBayDen (#PCDATA)>
+<!ELEMENT KhoangCach (#PCDATA)>
+
+<!-- Chuyến bay -->
+<!ELEMENT Flights (Flight+)>
+<!ELEMENT Flight (MaChuyenBay, SoHieu, MaTuyenBay, MaMayBay, GioDi, GioDen, MauMaybay, SucChua)>
+<!ELEMENT MaChuyenBay (#PCDATA)>
+<!ELEMENT SoHieu (#PCDATA)>
+<!ELEMENT MaMayBay (#PCDATA)>
+<!ELEMENT GioDi (#PCDATA)>
+<!ELEMENT GioDen (#PCDATA)>
+<!ELEMENT MauMaybay (#PCDATA)>
+<!ELEMENT SucChua (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 2: HỆ THỐNG HÀNH KHÁCH -->
+<!-- ========================================== -->
+<!ELEMENT DanhSachHanhKhach (HanhKhach+)>
+<!ELEMENT HanhKhach (MaHK, HoTen, NgaySinh, Email, DienThoai, SoHoChieu?)>
+<!ELEMENT MaHK (#PCDATA)>
+<!ELEMENT HoTen (#PCDATA)>
+<!ELEMENT NgaySinh (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT DienThoai (#PCDATA)>
+<!ELEMENT SoHoChieu (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 3: HỆ THỐNG TÀI KHOẢN -->
+<!-- ========================================== -->
+<!ELEMENT DanhSachTaiKhoan (TaiKhoan+)>
+<!ELEMENT TaiKhoan (MaTK, TenDangNhap, MatKhau, MaHK)>
+<!ELEMENT MaTK (#PCDATA)>
+<!ELEMENT TenDangNhap (#PCDATA)>
+<!ELEMENT MatKhau (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 4: HỆ THỐNG ĐẶT CHỖ -->
+<!-- ========================================== -->
+<!ELEMENT DanhSachDatCho (DatCho+)>
+<!ELEMENT DatCho (MaDC, MaTK, MaChuyenBay, MaKiGui?, MaPNR, NgayDat, TrangThai, TongTien, ThoiHanGiuCho, PhuongThucTT, GhiChu?)>
+<!ELEMENT MaDC (#PCDATA)>
+<!ELEMENT MaPNR (#PCDATA)>
+<!ELEMENT NgayDat (#PCDATA)>
+<!ELEMENT TongTien (#PCDATA)>
+<!ELEMENT ThoiHanGiuCho (#PCDATA)>
+<!ELEMENT PhuongThucTT (#PCDATA)>
+<!ELEMENT GhiChu (#PCDATA)>
+<!ELEMENT TrangThai (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 5: HỆ THỐNG KÝ GỬI HÀNH LÝ -->
+<!-- ========================================== -->
+<!ELEMENT DanhSachKiGui (KiGui+)>
+<!ELEMENT KiGui (MaKG, SoKiGui, ThanhToan)>
+<!ELEMENT MaKG (#PCDATA)>
+<!ELEMENT MaKiGui (#PCDATA)>
+<!ELEMENT SoKiGui (#PCDATA)>
+<!ELEMENT ThanhToan (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 6: HỆ THỐNG HỘ CHIẾU -->
+<!-- ========================================== -->
+<!ELEMENT HoChieus (HoChieu+)>
+<!ELEMENT HoChieu (SoHoChieu, QuocTich, NgayCap, NgayHetHan, NuocCap)>
+<!ELEMENT QuocTich (#PCDATA)>
+<!ELEMENT NgayCap (#PCDATA)>
+<!ELEMENT NgayHetHan (#PCDATA)>
+<!ELEMENT NuocCap (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 7: HỆ THỐNG LOẠI VÉ -->
+<!-- ========================================== -->
+<!ELEMENT LoaiVes (LoaiVe+)>
+<!ELEMENT LoaiVe (MaLoaiVe, MaVe, TenLoaiVe)>
+<!ELEMENT MaLoaiVe (#PCDATA)>
+<!ELEMENT MaVe (#PCDATA)>
+<!ELEMENT TenLoaiVe (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 8: HỆ THỐNG CHI TIẾT VÉ -->
+<!-- ========================================== -->
+<!ELEMENT ChiTietVes (ChiTietVe+)>
+<!ELEMENT ChiTietVe (MaVe, MaDatCho, MaHK, HangGhe, SoGhe, GiaTien, ThanhTien, TrangThai)>
+<!ELEMENT MaDatCho (#PCDATA)>
+<!ELEMENT HangGhe (#PCDATA)>
+<!ELEMENT SoGhe (#PCDATA)>
+<!ELEMENT GiaTien (#PCDATA)>
+<!ELEMENT ThanhTien (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- MODULE 9: HỆ THỐNG THÔNG TIN HÀNH KHÁCH -->
+<!-- ========================================== -->
+<!ELEMENT ThongTinHanhKhachs (ThongTinHanhKhach+)>
+<!ELEMENT ThongTinHanhKhach (CCCD, MaVe, SoHoChieu, HoTen, SoDienThoai)>
+<!ELEMENT CCCD (#PCDATA)>
+<!ELEMENT SoDienThoai (#PCDATA)>
+
+<!-- ========================================== -->
+<!-- ATTRIBUTES -->
+<!-- ========================================== -->
+<!ATTLIST AirlineSystem xmlns CDATA #FIXED "http://example.com/airline">

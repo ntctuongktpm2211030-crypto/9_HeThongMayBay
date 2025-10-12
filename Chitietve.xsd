@@ -10,16 +10,14 @@
   <xs:complexType name="ChiTietVeType">
     <xs:sequence>
       <xs:element name="MaVe" type="IdInt"/>
-      <xs:element name="MaTuyenBay" type="Code20"/>
+      <xs:element name="MaDatCho" type="IdInt"/>
       <xs:element name="MaHK" type="IdInt"/>
       <xs:element name="HangGhe" type="CabinClass"/>
       <xs:element name="SoGhe" type="SeatCode"/>
-      <xs:element name="GiaTien" type="Money"/>
+      <xs:element name="Gia" type="Money"/>
       <xs:element name="Thue" type="Percent100"/>
       <xs:element name="ThanhTien" type="Money"/>
       <xs:element name="TrangThai" type="TicketStatus"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
-
-

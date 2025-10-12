@@ -28,8 +28,7 @@
 
   <xs:simpleType name="PhoneNumber">
     <xs:restriction base="xs:string">
-      <xs:minLength value="6"/>
-      <xs:maxLength value="20"/>
+      <xs:length value="10"/>
       <xs:pattern value="[0-9()+\- ]+"/>
     </xs:restriction>
   </xs:simpleType>
@@ -45,7 +44,7 @@
   <xs:simpleType name="Percent100">
     <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0"/>
-      <xs:maxInclusive value="100"/>
+      <xs:totalDigits value="16"/>
       <xs:fractionDigits value="2"/>
     </xs:restriction>
   </xs:simpleType>
@@ -67,7 +66,7 @@
 
   <xs:simpleType name="TicketStatus">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Booked"/>
+      <xs:enumeration value="Booked"/> 
       <xs:enumeration value="Paid"/>
       <xs:enumeration value="Cancelled"/>
       <xs:enumeration value="CheckedIn"/>

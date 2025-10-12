@@ -12,6 +12,7 @@
       <xs:element name="MaChuyenBay" type="IdInt"/>
       <xs:element name="SoHieu" type="IdInt"/>
       <xs:element name="MaTuyenBay" type="IdInt"/>
+      <xs:element name="MaMayBay" type="IdInt"/>
       <xs:element name="GioDi" type="xs:dateTime"/>
       <xs:element name="GioDen" type="xs:dateTime"/>
       <xs:element name="MauMaybay" type="Varchar100"/>
