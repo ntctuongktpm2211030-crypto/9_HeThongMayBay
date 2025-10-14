@@ -4,6 +4,7 @@
            xmlns="http://example.com/hanhkhach"
            xmlns:hc="http://example.com/airline"
            elementFormDefault="qualified">
+  <!-- chứa key chung -->
 
   <!-- Import keyairline schema để tham chiếu khóa chính pk_HoChieu -->
   <xs:import namespace="http://example.com/airline" schemaLocation="airline.xsd"/>

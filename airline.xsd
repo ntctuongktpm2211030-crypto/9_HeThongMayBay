@@ -6,12 +6,13 @@
            xmlns:hk="http://example.com/hanhkhach"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-
-  <xs:include schemaLocation="common_type.xsd"/>
-  <xs:include schemaLocation="Hochieu.xsd"/>
+ 
   <xs:include schemaLocation="Loaive.xsd"/>
   <xs:include schemaLocation="Chitietve.xsd"/>
   <xs:include schemaLocation="ThongtinKH.xsd"/>
+  <xs:include schemaLocation="common_type.xsd"/>
+  <xs:include schemaLocation="Hochieu.xsd"/>
+
   
   <!-- Import DATCHO schema để tham chiếu khóa chính -->
   <xs:import namespace="http://example.com/datcho" schemaLocation="DATCHO.xsd"/>

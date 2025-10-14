@@ -4,7 +4,7 @@
            xmlns="http://example.com/airline"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-
+  <!-- Khai báo định nghĩa Kiểu Dữ Liệu -->
   <xs:simpleType name="IdInt">
     <xs:restriction base="xs:positiveInteger">
       <xs:maxInclusive value="999999999"/>

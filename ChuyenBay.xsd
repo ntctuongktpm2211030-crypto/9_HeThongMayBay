@@ -5,7 +5,7 @@
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
 
-  <xs:include schemaLocation="common_types.xsd"/>
+  <xs:include schemaLocation="common_types.xsd"/> <!-- Chỏ đến -->
 
   <xs:complexType name="ChuyenBayType">
     <xs:sequence>

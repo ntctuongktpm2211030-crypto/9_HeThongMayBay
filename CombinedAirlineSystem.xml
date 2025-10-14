@@ -16,9 +16,7 @@
     http://example.com/hanhkhach       HANHKHACH.xsd
     http://example.com/kigui           KIGUI.xsd
     http://example.com/taikhoan        TAIKHOAN.xsd">
-  <!-- ========================================== -->
   <!-- HỆ THỐNG SÂN BAY VÀ TUYẾN BAY -->
-  <!-- ========================================== -->
   <Airports>
     <Airport>
       <MaSanBay>1</MaSanBay>

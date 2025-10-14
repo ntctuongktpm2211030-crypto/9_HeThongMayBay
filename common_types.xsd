@@ -4,6 +4,7 @@
            xmlns="http://example.com/airportsystem"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
+  <!-- Khai báo định nghĩa Kiểu Dữ Liệu -->
 
   <xs:simpleType name="IdInt">
     <xs:restriction base="xs:integer">

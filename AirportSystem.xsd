@@ -8,6 +8,7 @@
   <xs:include schemaLocation="SanBay.xsd"/>
   <xs:include schemaLocation="TuyenBay.xsd"/>
   <xs:include schemaLocation="ChuyenBay.xsd"/>
+  <!-- Các khóa của hệ thống máy bay gồm: Sân Bay, Tuyến Bay , Chuyến Bay -->
   <xs:element name="AirportSystem">
     <xs:complexType>
       <xs:sequence>

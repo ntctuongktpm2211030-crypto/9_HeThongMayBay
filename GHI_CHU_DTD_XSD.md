@@ -1,4 +1,4 @@
-### Ghi chú nhanh: DTD vs XSD và "restriction" trong XSD
+### Ghi chú nhanh: DTD, XSD và "restriction" trong XSD
 
 - **restriction trong XSD**: Cách tạo kiểu dữ liệu hẹp hơn từ kiểu cơ sở. Ví dụ `xs:restriction base="xs:string"` rồi thêm `xs:minLength/xs:maxLength/xs:pattern/xs:enumeration...` để giới hạn giá trị hợp lệ.
   - Ví dụ trong `TAIKHOAN.xsd`: `UsernameType` giới hạn độ dài 4–32 và pattern; `PasswordType` giới hạn 6–64.

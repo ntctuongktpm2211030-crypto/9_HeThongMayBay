@@ -3,8 +3,9 @@
            targetNamespace="http://example.com/kigui"
            xmlns="http://example.com/kigui"
            elementFormDefault="qualified">
-
-
+  
+  
+  <!-- chứa key chung -->
 
   <!-- Kiểu dữ liệu riêng -->
   <xs:simpleType name="TrangThaiKiGuiType">

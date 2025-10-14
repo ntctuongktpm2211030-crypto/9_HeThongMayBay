@@ -4,6 +4,7 @@
            xmlns="http://example.com/taikhoan"
            xmlns:hk="http://example.com/hanhkhach"
            elementFormDefault="qualified">
+  <!-- chứa key chung -->
 
   <!-- Import schema HanhKhach -->
   <xs:import namespace="http://example.com/hanhkhach"
