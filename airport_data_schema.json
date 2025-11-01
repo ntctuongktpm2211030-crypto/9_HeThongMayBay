@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "database": {
+      "type": "object",
+      "properties": {
+        "HANHKHACH": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "MaHK": {
+                "type": "integer"
+              },
+              "HoTen": {
+                "type": "string"
+              },
+              "NgaySinh": {
+                "type": "string",
+                "format": "date"
+              },
+              "Email": {
+                "type": "string"
+              },
+              "DienThoai": {
+                "type": "integer"
+              },
+              "SoHoChieu": {
+                "type": "string"
+              }
+            },
+            "required": ["MaHK", "HoTen", "NgaySinh", "Email", "DienThoai", "SoHoChieu"],
+            "additionalProperties": false
+          }
+        },
+        "TaiKhoan": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "MaTK": {
+                "type": "integer"
+              },
+              "TenDangNhap": {
+                "type": "string"
+              },
+              "MatKhau": {
+                "type": "string"
+              },
+              "MaHK": {
+                "type": "integer"
+              }
+            },
+            "required": ["MaTK", "TenDangNhap", "MatKhau", "MaHK"],
+            "additionalProperties": false
+          }
+        },
+        "DatCho": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "MaDatCho": {
+                "type": "integer"
+              },
+              "MaTK": {
+                "type": "integer"
+              },
+              "MaChuyenBay": {
+                "type": "integer"
+              },
+              "MaKiGui": {
+                "type": "integer"
+              },
+              "MaPNR": {
+                "type": "string"
+              },
+              "NgayDat": {
+                "type": "string",
+                "format": "date"
+              },
+              "TrangThai": {
+                "type": "string"
+              },
+              "TongTien": {
+                "type": "number"
+              },
+              "ThoiHanGiuCho": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "PhuongThucTT": {
+                "type": "string"
+              }
+            },
+            "required": ["MaDatCho", "MaTK", "MaChuyenBay", "MaKiGui", "MaPNR", "NgayDat", "TrangThai", "TongTien", "ThoiHanGiuCho", "PhuongThucTT"],
+            "additionalProperties": false
+          }
+        },
+        "ChiTietVe": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "MaVe": {
+                "type": "integer"
+              },
+              "MaDatCho": {
+                "type": "integer"
+              },
+              "MaHK": {
+                "type": "integer"
+              },
+              "HangGhe": {
+                "type": "string"
+              },
+              "Gia": {
+                "type": "number"
+              },
+              "ThanhTien": {
+                "type": "number"
+              },
+              "TrangThai": {
+                "type": "string"
+              }
+            },
+            "required": ["MaVe", "MaDatCho", "MaHK", "HangGhe", "Gia", "ThanhTien", "TrangThai"],
+            "additionalProperties": false
+          }
+        },
+        "ThongTinHanhKhach": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "CCCD": {
+                "type": "integer"
+              },
+              "MaVe": {
+                "type": "integer"
+              },
+              "SoHoChieu": {
+                "type": "string"
+              },
+              "HoTen": {
+                "type": "string"
+              },
+              "SoDienThoai": {
+                "type": "integer"
+              }
+            },
+            "required": ["CCCD", "MaVe", "SoHoChieu", "HoTen", "SoDienThoai"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["HANHKHACH", "TaiKhoan", "DatCho", "ChiTietVe", "ThongTinHanhKhach"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["database"],
+  "additionalProperties": false
+}
