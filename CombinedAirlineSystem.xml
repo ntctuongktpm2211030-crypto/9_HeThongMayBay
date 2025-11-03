@@ -99,7 +99,7 @@
       <airport:MaTuyenBay>104</airport:MaTuyenBay>
       <airport:MaSanBayDi>7</airport:MaSanBayDi>
       <airport:MaSanBayDen>5</airport:MaSanBayDen>
-      <airport:KhoangCach>2500.0</airport:KhoangCach>
+      <airport:KhoangCach>1585.0</airport:KhoangCach>
     </airport:Route>
     <airport:Route>
       <airport:MaTuyenBay>105</airport:MaTuyenBay>
@@ -111,31 +111,31 @@
         <airport:MaTuyenBay>106</airport:MaTuyenBay>
         <airport:MaSanBayDi>8</airport:MaSanBayDi>
         <airport:MaSanBayDen>2</airport:MaSanBayDen>
-        <airport:KhoangCach>2500.0</airport:KhoangCach>
+        <airport:KhoangCach>2800.0</airport:KhoangCach>
       </airport:Route>
       <airport:Route>
         <airport:MaTuyenBay>107</airport:MaTuyenBay>
         <airport:MaSanBayDi>6</airport:MaSanBayDi>
         <airport:MaSanBayDen>3</airport:MaSanBayDen>
-        <airport:KhoangCach>2500.0</airport:KhoangCach>
+        <airport:KhoangCach>1900.0</airport:KhoangCach>
       </airport:Route>
       <airport:Route>
         <airport:MaTuyenBay>108</airport:MaTuyenBay>
         <airport:MaSanBayDi>5</airport:MaSanBayDi>
         <airport:MaSanBayDen>1</airport:MaSanBayDen>
-        <airport:KhoangCach>2500.0</airport:KhoangCach>
+        <airport:KhoangCach>3500.0</airport:KhoangCach>
       </airport:Route>
       <airport:Route>
         <airport:MaTuyenBay>109</airport:MaTuyenBay>
         <airport:MaSanBayDi>4</airport:MaSanBayDi>
         <airport:MaSanBayDen>3</airport:MaSanBayDen>
-        <airport:KhoangCach>2500.0</airport:KhoangCach>
+        <airport:KhoangCach>2365.0</airport:KhoangCach>
       </airport:Route>
       <airport:Route>
         <airport:MaTuyenBay>110</airport:MaTuyenBay>
         <airport:MaSanBayDi>2</airport:MaSanBayDi>
         <airport:MaSanBayDen>1</airport:MaSanBayDen>
-        <airport:KhoangCach>2500.0</airport:KhoangCach>
+        <airport:KhoangCach>3780.0</airport:KhoangCach>
       </airport:Route>
   </airport:Routes>
 

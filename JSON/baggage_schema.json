@@ -1,0 +1,33 @@
+{
+    "baggage": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Baggage",
+      "type": "object",
+      "required": ["baggage"],
+      "properties": {
+        "baggage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["maKiGui", "soKiGui", "thanhToan"],
+            "properties": {
+              "maKiGui": {
+                "type": "string",
+                "pattern": "^[0-9]+$"
+              },
+              "soKiGui": {
+                "type": "number",
+                "minimum": 0
+              },
+              "thanhToan": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+}

@@ -1,0 +1,256 @@
+{
+    "bookings": [
+      {
+        "maDatCho": "1",
+        "maTK": "1",
+        "maChuyenBay": "501",
+        "maKiGui": "1",
+        "maPNR": "PNR001",
+        "ngayDat": "2025-09-01",
+        "trangThai": "MOI",
+        "tongTien": 1650000.0,
+        "thoiHanGiuCho": "2025-09-01T23:59:59",
+        "phuongThucThanhToan": "Credit Card",
+        "ghiChu": ""
+      },
+      {
+        "maDatCho": "2",
+        "maTK": "2",
+        "maChuyenBay": "502",
+        "maKiGui": "2",
+        "maPNR": "PNR002",
+        "ngayDat": "2025-09-02",
+        "trangThai": "XAC_NHAN",
+        "tongTien": 1800000.0,
+        "thoiHanGiuCho": "2025-09-02T23:59:59",
+        "phuongThucThanhToan": "Bank Transfer",
+        "ghiChu": ""
+      },
+      {
+        "maDatCho": "3",
+        "maTK": "3",
+        "maChuyenBay": "503",
+        "maKiGui": "3",
+        "maPNR": "PNR003",
+        "ngayDat": "2025-09-03",
+        "trangThai": "HUY",
+        "tongTien": 2200000.0,
+        "thoiHanGiuCho": "2025-09-03T23:59:59",
+        "phuongThucThanhToan": "Credit Card",
+        "ghiChu": "Lỗi thanh toán"
+      },
+      {
+        "maDatCho": "4",
+        "maTK": "4",
+        "maChuyenBay": "504",
+        "maKiGui": "4",
+        "maPNR": "PNR004",
+        "ngayDat": "2025-09-04",
+        "trangThai": "XAC_NHAN",
+        "tongTien": 13200000.0,
+        "thoiHanGiuCho": "2025-09-04T23:59:59",
+        "phuongThucThanhToan": "PayPal",
+        "ghiChu": ""
+      },
+      {
+        "maDatCho": "5",
+        "maTK": "5",
+        "maChuyenBay": "505",
+        "maKiGui": "5",
+        "maPNR": "PNR005",
+        "ngayDat": "2025-09-05",
+        "trangThai": "MOI",
+        "tongTien": 1950000.0,
+        "thoiHanGiuCho": "2025-09-05T23:59:59",
+        "phuongThucThanhToan": "Credit Card",
+        "ghiChu": ""
+      },
+      {
+        "maDatCho": "6",
+        "maTK": "6",
+        "maChuyenBay": "501",
+        "maKiGui": "6",
+        "maPNR": "PNR006",
+        "ngayDat": "2025-09-06",
+        "trangThai": "XAC_NHAN",
+        "tongTien": 1650000.0,
+        "thoiHanGiuCho": "2025-09-06T23:59:59",
+        "phuongThucThanhToan": "Bank Transfer",
+        "ghiChu": ""
+      },
+      {
+        "maDatCho": "7",
+        "maTK": "7",
+        "maChuyenBay": "502",
+        "maKiGui": "7",
+        "maPNR": "PNR007",
+        "ngayDat": "2025-09-07",
+        "trangThai": "MOI",
+        "tongTien": 1800000.0,
+        "thoiHanGiuCho": "2025-09-07T23:59:59",
+        "phuongThucThanhToan": "Credit Card",
+        "ghiChu": ""
+      },
+      {
+        "maDatCho": "8",
+        "maTK": "8",
+        "maChuyenBay": "503",
+        "maKiGui": "8",
+        "maPNR": "PNR008",
+        "ngayDat": "2025-09-08",
+        "trangThai": "XAC_NHAN",
+        "tongTien": 2200000.0,
+        "thoiHanGiuCho": "2025-09-08T23:59:59",
+        "phuongThucThanhToan": "PayPal",
+        "ghiChu": "Ghế ưu tiên"
+      },
+      {
+        "maDatCho": "9",
+        "maTK": "9",
+        "maChuyenBay": "504",
+        "maKiGui": "9",
+        "maPNR": "PNR009",
+        "ngayDat": "2025-09-09",
+        "trangThai": "HUY",
+        "tongTien": 13200000.0,
+        "thoiHanGiuCho": "2025-09-09T23:59:59",
+        "phuongThucThanhToan": "Credit Card",
+        "ghiChu": "Đổi lịch"
+      },
+      {
+        "maDatCho": "10",
+        "maTK": "10",
+        "maChuyenBay": "505",
+        "maKiGui": "10",
+        "maPNR": "PNR010",
+        "ngayDat": "2025-09-10",
+        "trangThai": "XAC_NHAN",
+        "tongTien": 1950000.0,
+        "thoiHanGiuCho": "2025-09-10T23:59:59",
+        "phuongThucThanhToan": "Bank Transfer",
+        "ghiChu": ""
+      }
+    ],
+    "passengers": [
+      {
+        "maHK": "101",
+        "hoTen": "Nguyễn Văn An",
+        "ngaySinh": "1998-02-14",
+        "email": "an.nguyen@example.com",
+        "dienThoai": "0912345678",
+        "soHoChieu": "C1234567",
+        "taiKhoan": {
+          "maTK": "1",
+          "tenDangNhap": "nguyenvan_an"
+        }
+      },
+      {
+        "maHK": "102",
+        "hoTen": "Trần Thị Bình",
+        "ngaySinh": "1999-05-20",
+        "email": "binh.tran@example.com",
+        "dienThoai": "0987654321",
+        "soHoChieu": "B7654321",
+        "taiKhoan": {
+          "maTK": "2",
+          "tenDangNhap": "tranbinh99"
+        }
+      },
+      {
+        "maHK": "103",
+        "hoTen": "Lê Minh Châu",
+        "ngaySinh": "2001-11-03",
+        "email": "chau.le@example.com",
+        "dienThoai": "0901122334",
+        "soHoChieu": "H9988776",
+        "taiKhoan": {
+          "maTK": "3",
+          "tenDangNhap": "leminhchau"
+        }
+      },
+      {
+        "maHK": "104",
+        "hoTen": "Phạm Quốc Dũng",
+        "ngaySinh": "1997-07-07",
+        "email": "dung.pham@example.com",
+        "dienThoai": "0933666999",
+        "soHoChieu": "P1122334",
+        "taiKhoan": {
+          "maTK": "4",
+          "tenDangNhap": "quocdung"
+        }
+      },
+      {
+        "maHK": "105",
+        "hoTen": "Võ Ngọc Hân",
+        "ngaySinh": "2000-01-10",
+        "email": "han.vo@example.com",
+        "dienThoai": "0911222333",
+        "soHoChieu": "N4455667",
+        "taiKhoan": {
+          "maTK": "5",
+          "tenDangNhap": "vongochan"
+        }
+      },
+      {
+        "maHK": "106",
+        "hoTen": "Nguyễn Thị Cát Tường",
+        "ngaySinh": "2004-03-08",
+        "email": "cattuong.nguyen@example.com",
+        "dienThoai": "0968887776",
+        "soHoChieu": "V1237890",
+        "taiKhoan": {
+          "maTK": "6",
+          "tenDangNhap": "cat_tuong"
+        }
+      },
+      {
+        "maHK": "107",
+        "hoTen": "Đặng Gia Huy",
+        "ngaySinh": "1996-12-01",
+        "email": "huy.dang@example.com",
+        "dienThoai": "0905566778",
+        "soHoChieu": "K3344556",
+        "taiKhoan": {
+          "maTK": "7",
+          "tenDangNhap": "danghuy96"
+        }
+      },
+      {
+        "maHK": "108",
+        "hoTen": "Hoàng Thu Ý",
+        "ngaySinh": "1995-09-18",
+        "email": "y.hoang@example.com",
+        "dienThoai": "0888999666",
+        "soHoChieu": "L7788990",
+        "taiKhoan": {
+          "maTK": "8",
+          "tenDangNhap": "hoangthu_y"
+        }
+      },
+      {
+        "maHK": "109",
+        "hoTen": "Phan Quỳnh Anh",
+        "ngaySinh": "2002-04-12",
+        "email": "quynhanh.phan@example.com",
+        "dienThoai": "0919001100",
+        "soHoChieu": "M5566778",
+        "taiKhoan": {
+          "maTK": "9",
+          "tenDangNhap": "quynhanh02"
+        }
+      },
+      {
+        "maHK": "110",
+        "hoTen": "Mai Đức Bảo",
+        "ngaySinh": "1998-08-08",
+        "email": "bao.mai@example.com",
+        "dienThoai": "0909090909",
+        "soHoChieu": "R3344221",
+        "taiKhoan": {
+          "maTK": "10",
+          "tenDangNhap": "maiducbao"
+        }
+      }
+    ]
+}

@@ -1,159 +1,575 @@
-<!DOCTYPE html>
 <html lang="vi">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>Báo Cáo Truy Vấn Hệ Thống Hàng Không</title>
-<style>
-          body { font-family: Arial, sans-serif; margin: 30px; background: #f9f9f9; color: #333; }
-          h1 { text-align: center; color: #2c3e50; }
-          h2 { color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 40px; }
-          table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; }
-          th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-          th { background-color: #3498db; color: white; font-weight: 600; }
-          tr:nth-child(even) { background-color: #f2f2f2; }
-          tr:hover { background-color: #f0f8ff; }
-          .no-data { color: #e74c3c; font-style: italic; }
-          .footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9em; }
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Hệ thống vé máy bay - XML → HTML</title>
+    <style>
+          body { font-family: Arial, sans-serif; margin: 0; background: #f3f4f6; }
+          header { background: #0f172a; color: #fff; padding: 1rem 2rem; }
+          h1 { margin: 0; font-size: 1.4rem; }
+          .container { padding: 1.5rem 2rem; }
+          h2 { margin-top: 2rem; margin-bottom: .5rem; color: #0f172a; }
+          table { border-collapse: collapse; width: 100%; background: #fff; margin-bottom: 1rem; }
+          th, td { border: 1px solid #e2e8f0; padding: .5rem .6rem; font-size: .9rem; }
+          th { background: #e2e8f0; text-align: left; }
+          .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: .7rem; }
+          .badge-new { background: #0ea5e9; color: #fff; }
+          .badge-ok { background: #16a34a; color: #fff; }
+          .badge-cancel { background: #dc2626; color: #fff; }
+          .small { font-size: .75rem; color: #64748b; }
+          nav { margin-bottom: 1rem; }
+          nav a { margin-right: .7rem; color: #0f172a; text-decoration: none; font-weight: 600; }
+          nav a:hover { text-decoration: underline; }
+          section { scroll-margin-top: 4rem; }
         </style>
-</head>
-<body>
-<h1>HỆ THỐNG HÀNG KHÔNG - BÁO CÁO TRUY VẤN</h1>
-<h2>Câu 1: Liệt kê thông tin của mã khách hàng 105 (họ tên, địa chỉ, số điện thoại, email)</h2>
-<table>
-<tr>
-<th>Thông tin</th>
-<th>Chi tiết</th>
-</tr>
-<tr>
-<td>Họ tên</td>
-<td>Võ Ngọc Hân</td>
-</tr>
-<tr>
-<td>Địa chỉ</td>
-<td class="no-data">Không có dữ liệu</td>
-</tr>
-<tr>
-<td>Số điện thoại</td>
-<td>0911222333</td>
-</tr>
-<tr>
-<td>Email</td>
-<td>han.vo@example.com</td>
-</tr>
-</table>
-<h2>Câu 2: Liệt kê tất cả mã chuyến bay</h2>
-<table>
-<tr>
-<th>STT</th>
-<th>Mã chuyến bay</th>
-</tr>
-<tr>
-<td>1</td>
-<td>501</td>
-</tr>
-<tr>
-<td>2</td>
-<td>502</td>
-</tr>
-<tr>
-<td>3</td>
-<td>503</td>
-</tr>
-<tr>
-<td>4</td>
-<td>504</td>
-</tr>
-<tr>
-<td>5</td>
-<td>505</td>
-</tr>
-<tr>
-<td>6</td>
-<td>506</td>
-</tr>
-<tr>
-<td>7</td>
-<td>507</td>
-</tr>
-</table>
-<h2>Câu 3: Thống kê các mã khách hàng có hạng ghế là Economy</h2>
-<table>
-<tr>
-<th>Mã HK</th>
-<th>Họ tên</th>
-<th>Số ghế</th>
-</tr>
-<tr>
-<td>101</td>
-<td>Nguyễn Văn An</td>
-<td>12A</td>
-</tr>
-<tr>
-<td>103</td>
-<td>Lê Minh Châu</td>
-<td>18B</td>
-</tr>
-<tr>
-<td>105</td>
-<td>Võ Ngọc Hân</td>
-<td>15C</td>
-</tr>
-<tr>
-<td>106</td>
-<td>Nguyễn Thị Cát Tường</td>
-<td>8D</td>
-</tr>
-<tr>
-<td>108</td>
-<td>Hoàng Thu Ý</td>
-<td>14E</td>
-</tr>
-<tr>
-<td>110</td>
-<td>Mai Đức Bảo</td>
-<td>11F</td>
-</tr>
-</table>
-<h2>Câu 4: Hiển thị mã tài khoản, tên đăng nhập, mật khẩu của hành khách 107</h2>
-<table>
-<tr>
-<th>Thông tin</th>
-<th>Chi tiết</th>
-</tr>
-<tr>
-<td>Mã tài khoản</td>
-<td>7</td>
-</tr>
-<tr>
-<td>Tên đăng nhập</td>
-<td>danghuy96</td>
-</tr>
-<tr>
-<td>Mật khẩu</td>
-<td>Huy-321</td>
-</tr>
-</table>
-<h2>Câu 5: Lấy họ tên của hành khách có năm sinh là 1998</h2>
-<table>
-<tr>
-<th>STT</th>
-<th>Họ tên</th>
-<th>Ngày sinh</th>
-</tr>
-<tr>
-<td>1</td>
-<td>Mai Đức Bảo</td>
-<td>1998-08-08</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Nguyễn Văn An</td>
-<td>1998-02-14</td>
-</tr>
-</table>
-<div class="footer">
-          Báo cáo được tạo bằng XSLT • Dữ liệu từ CombinedAirlineSystem.xml
-        </div>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>Hệ thống vé máy bay – XML demo</h1>
+      <div class="small">Nguồn: CombinedAirlineSystem.xml</div>
+    </header>
+    <div class="container">
+      <nav>
+        <a href="#airports">Sân bay</a>
+        <a href="#routes">Tuyến bay</a>
+        <a href="#flights">Chuyến bay</a>
+        <a href="#passengers">Hành khách</a>
+        <a href="#bookings">Đặt chỗ</a>
+        <a href="#tickets">Chi tiết vé</a>
+      </nav>
+      <section id="airports">
+        <h2>1. Danh sách sân bay</h2>
+        <table>
+          <tr>
+            <th>Mã</th>
+            <th>Tên sân bay</th>
+            <th>Thành phố</th>
+            <th>Quốc gia</th>
+            <th>IATA</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Sân bay Tân Sơn Nhất</td>
+            <td>TP. Hồ Chí Minh</td>
+            <td>Việt Nam</td>
+            <td>SGN</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sân bay Nội Bài</td>
+            <td>Hà Nội</td>
+            <td>Việt Nam</td>
+            <td>HAN</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sân bay Đà Nẵng</td>
+            <td>Đà Nẵng</td>
+            <td>Việt Nam</td>
+            <td>DAD</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Sân bay Narita</td>
+            <td>Tokyo</td>
+            <td>Nhật Bản</td>
+            <td>NRT</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Sân bay Changi</td>
+            <td>Singapore</td>
+            <td>Singapore</td>
+            <td>SIN</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Sân bay Kualalumpur</td>
+            <td>Kualalumpur</td>
+            <td>Malaysia</td>
+            <td>KUL</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Sân bay Ninoy Aquino</td>
+            <td>Manila</td>
+            <td>Philippines</td>
+            <td>MNL</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Sân bay Suvarnabhumi</td>
+            <td>Bangkok</td>
+            <td>Thailand</td>
+            <td>BKK</td>
+          </tr>
+        </table>
+      </section>
+      <section id="routes">
+        <h2>2. Tuyến bay</h2>
+        <table>
+          <tr>
+            <th>Mã tuyến</th>
+            <th>Đi</th>
+            <th>Đến</th>
+            <th>Khoảng cách (km)</th>
+          </tr>
+        </table>
+      </section>
+      <section id="flights">
+        <h2>3. Chuyến bay</h2>
+        <table>
+          <tr>
+            <th>Mã CB</th>
+            <th>Số hiệu</th>
+            <th>Tuyến</th>
+            <th>Giờ đi</th>
+            <th>Giờ đến</th>
+            <th>Máy bay</th>
+            <th>Sức chứa</th>
+          </tr>
+          <tr>
+            <td>501</td>
+            <td>1001</td>
+            <td>101<span class="small">
+                      -
+                      1
+                      →
+                      8</span></td>
+            <td>2025-09-29T08:00:00</td>
+            <td>2025-09-29T10:00:00</td>
+            <td>Airbus A320</td>
+            <td>180</td>
+          </tr>
+          <tr>
+            <td>502</td>
+            <td>1002</td>
+            <td>102<span class="small">
+                      -
+                      2
+                      →
+                      6</span></td>
+            <td>2025-09-29T09:00:00</td>
+            <td>2025-09-29T11:00:00</td>
+            <td>Boeing 737</td>
+            <td>160</td>
+          </tr>
+          <tr>
+            <td>503</td>
+            <td>1003</td>
+            <td>103<span class="small">
+                      -
+                      3
+                      →
+                      4</span></td>
+            <td>2025-09-29T12:00:00</td>
+            <td>2025-09-29T15:00:00</td>
+            <td>Airbus A321</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>504</td>
+            <td>1004</td>
+            <td>104<span class="small">
+                      -
+                      7
+                      →
+                      5</span></td>
+            <td>2025-09-29T14:00:00</td>
+            <td>2025-09-29T18:00:00</td>
+            <td>Boeing 787</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>505</td>
+            <td>1005</td>
+            <td>105<span class="small">
+                      -
+                      5
+                      →
+                      1</span></td>
+            <td>2025-09-29T16:00:00</td>
+            <td>2025-09-29T19:00:00</td>
+            <td>Airbus A350</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>506</td>
+            <td>1006</td>
+            <td>106<span class="small">
+                      -
+                      8
+                      →
+                      2</span></td>
+            <td>2025-09-29T17:00:00</td>
+            <td>2025-09-29T19:30:00</td>
+            <td>Airbus A350</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>507</td>
+            <td>1087</td>
+            <td>107<span class="small">
+                      -
+                      6
+                      →
+                      3</span></td>
+            <td>2025-09-29T18:00:00</td>
+            <td>2025-09-29T21:00:00</td>
+            <td>Airbus A330</td>
+            <td>250</td>
+          </tr>
+        </table>
+      </section>
+      <section id="passengers">
+        <h2>4. Hành khách</h2>
+        <table>
+          <tr>
+            <th>Mã HK</th>
+            <th>Họ tên</th>
+            <th>Ngày sinh</th>
+            <th>Email</th>
+            <th>Hộ chiếu</th>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>Nguyễn Văn An</td>
+            <td>1998-02-14</td>
+            <td>an.nguyen@example.com</td>
+            <td>C1234567</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Trần Thị Bình</td>
+            <td>1999-05-20</td>
+            <td>binh.tran@example.com</td>
+            <td>B7654321</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Lê Minh Châu</td>
+            <td>2001-11-03</td>
+            <td>chau.le@example.com</td>
+            <td>H9988776</td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td>Phạm Quốc Dũng</td>
+            <td>1997-07-07</td>
+            <td>dung.pham@example.com</td>
+            <td>P1122334</td>
+          </tr>
+          <tr>
+            <td>105</td>
+            <td>Võ Ngọc Hân</td>
+            <td>2000-01-10</td>
+            <td>han.vo@example.com</td>
+            <td>N4455667</td>
+          </tr>
+          <tr>
+            <td>106</td>
+            <td>Nguyễn Thị Cát Tường</td>
+            <td>2004-03-08</td>
+            <td>cattuong.nguyen@example.com</td>
+            <td>V1237890</td>
+          </tr>
+          <tr>
+            <td>107</td>
+            <td>Đặng Gia Huy</td>
+            <td>1996-12-01</td>
+            <td>huy.dang@example.com</td>
+            <td>K3344556</td>
+          </tr>
+          <tr>
+            <td>108</td>
+            <td>Hoàng Thu Ý</td>
+            <td>1995-09-18</td>
+            <td>y.hoang@example.com</td>
+            <td>L7788990</td>
+          </tr>
+          <tr>
+            <td>109</td>
+            <td>Phan Quỳnh Anh</td>
+            <td>2002-04-12</td>
+            <td>quynhanh.phan@example.com</td>
+            <td>M5566778</td>
+          </tr>
+          <tr>
+            <td>110</td>
+            <td>Mai Đức Bảo</td>
+            <td>1998-08-08</td>
+            <td>bao.mai@example.com</td>
+            <td>R3344221</td>
+          </tr>
+        </table>
+      </section>
+      <section id="bookings">
+        <h2>5. Đặt chỗ</h2>
+        <table>
+          <tr>
+            <th>Mã DC</th>
+            <th>Tài khoản</th>
+            <th>Chuyến bay</th>
+            <th>PNR</th>
+            <th>Ngày đặt</th>
+            <th>Trạng thái</th>
+            <th>Tổng tiền</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1<span class="small">
+                      (
+                      nguyenvan_an
+                      )
+                    </span></td>
+            <td>501</td>
+            <td>PNR001</td>
+            <td>2025-09-01</td>
+            <td>
+              <span class="badge badge-new">MOI</span>
+            </td>
+            <td>1650000.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2<span class="small">
+                      (
+                      tranbinh99
+                      )
+                    </span></td>
+            <td>502</td>
+            <td>PNR002</td>
+            <td>2025-09-02</td>
+            <td>
+              <span class="badge badge-ok">XÁC NHẬN</span>
+            </td>
+            <td>1800000.00</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3<span class="small">
+                      (
+                      leminhchau
+                      )
+                    </span></td>
+            <td>503</td>
+            <td>PNR003</td>
+            <td>2025-09-03</td>
+            <td>
+              <span class="badge badge-cancel">HỦY</span>
+            </td>
+            <td>2200000.00</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>4<span class="small">
+                      (
+                      quocdung
+                      )
+                    </span></td>
+            <td>504</td>
+            <td>PNR004</td>
+            <td>2025-09-04</td>
+            <td>
+              <span class="badge badge-ok">XÁC NHẬN</span>
+            </td>
+            <td>13200000.00</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>5<span class="small">
+                      (
+                      vongochan
+                      )
+                    </span></td>
+            <td>505</td>
+            <td>PNR005</td>
+            <td>2025-09-05</td>
+            <td>
+              <span class="badge badge-new">MOI</span>
+            </td>
+            <td>1950000.00</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>6<span class="small">
+                      (
+                      cat_tuong
+                      )
+                    </span></td>
+            <td>501</td>
+            <td>PNR006</td>
+            <td>2025-09-06</td>
+            <td>
+              <span class="badge badge-ok">XÁC NHẬN</span>
+            </td>
+            <td>1650000.00</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>7<span class="small">
+                      (
+                      danghuy96
+                      )
+                    </span></td>
+            <td>502</td>
+            <td>PNR007</td>
+            <td>2025-09-07</td>
+            <td>
+              <span class="badge badge-new">MOI</span>
+            </td>
+            <td>1800000.00</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>8<span class="small">
+                      (
+                      hoangthu_y
+                      )
+                    </span></td>
+            <td>503</td>
+            <td>PNR008</td>
+            <td>2025-09-08</td>
+            <td>
+              <span class="badge badge-ok">XÁC NHẬN</span>
+            </td>
+            <td>2200000.00</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>9<span class="small">
+                      (
+                      quynhanh02
+                      )
+                    </span></td>
+            <td>504</td>
+            <td>PNR009</td>
+            <td>2025-09-09</td>
+            <td>
+              <span class="badge badge-cancel">HỦY</span>
+            </td>
+            <td>13200000.00</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>10<span class="small">
+                      (
+                      maiducbao
+                      )
+                    </span></td>
+            <td>505</td>
+            <td>PNR010</td>
+            <td>2025-09-10</td>
+            <td>
+              <span class="badge badge-ok">XÁC NHẬN</span>
+            </td>
+            <td>1950000.00</td>
+          </tr>
+        </table>
+      </section>
+      <section id="tickets">
+        <h2>6. Chi tiết vé</h2>
+        <table>
+          <tr>
+            <th>Mã vé</th>
+            <th>Mã đặt chỗ</th>
+            <th>Hành khách</th>
+            <th>Hạng ghế</th>
+            <th>Số ghế</th>
+            <th>Thành tiền</th>
+            <th>TT thanh toán</th>
+          </tr>
+          <tr>
+            <td>1001</td>
+            <td>1</td>
+            <td>Nguyễn Văn An<span class="small"> (HK: 101)</span></td>
+            <td>Economy</td>
+            <td>12A</td>
+            <td>1650000.00</td>
+            <td>Paid</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>2</td>
+            <td>Trần Thị Bình<span class="small"> (HK: 102)</span></td>
+            <td>Business</td>
+            <td>3C</td>
+            <td>13200000.00</td>
+            <td>Booked</td>
+          </tr>
+          <tr>
+            <td>1003</td>
+            <td>3</td>
+            <td>Lê Minh Châu<span class="small"> (HK: 103)</span></td>
+            <td>Economy</td>
+            <td>18B</td>
+            <td>2200000.00</td>
+            <td>Cancelled</td>
+          </tr>
+          <tr>
+            <td>1004</td>
+            <td>4</td>
+            <td>Phạm Quốc Dũng<span class="small"> (HK: 104)</span></td>
+            <td>Business</td>
+            <td>3A</td>
+            <td>13200000.00</td>
+            <td>Paid</td>
+          </tr>
+          <tr>
+            <td>1005</td>
+            <td>5</td>
+            <td>Võ Ngọc Hân<span class="small"> (HK: 105)</span></td>
+            <td>Economy</td>
+            <td>15C</td>
+            <td>1950000.00</td>
+            <td>Booked</td>
+          </tr>
+          <tr>
+            <td>1001</td>
+            <td>6</td>
+            <td>Nguyễn Thị Cát Tường<span class="small"> (HK: 106)</span></td>
+            <td>Economy</td>
+            <td>8D</td>
+            <td>1650000.00</td>
+            <td>Paid</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>7</td>
+            <td>Đặng Gia Huy<span class="small"> (HK: 107)</span></td>
+            <td>Business</td>
+            <td>2B</td>
+            <td>13200000.00</td>
+            <td>Booked</td>
+          </tr>
+          <tr>
+            <td>1003</td>
+            <td>8</td>
+            <td>Hoàng Thu Ý<span class="small"> (HK: 108)</span></td>
+            <td>Economy</td>
+            <td>14E</td>
+            <td>2200000.00</td>
+            <td>Paid</td>
+          </tr>
+          <tr>
+            <td>1004</td>
+            <td>9</td>
+            <td>Phan Quỳnh Anh<span class="small"> (HK: 109)</span></td>
+            <td>Business</td>
+            <td>1A</td>
+            <td>13200000.00</td>
+            <td>Booked</td>
+          </tr>
+          <tr>
+            <td>1005</td>
+            <td>10</td>
+            <td>Mai Đức Bảo<span class="small"> (HK: 110)</span></td>
+            <td>Economy</td>
+            <td>11F</td>
+            <td>1950000.00</td>
+            <td>Paid</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,68 @@
+{
+    "passengers": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Passengers",
+      "type": "object",
+      "required": ["passengers"],
+      "properties": {
+        "passengers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "maHK",
+              "hoTen",
+              "ngaySinh",
+              "email",
+              "dienThoai",
+              "soHoChieu"
+            ],
+            "properties": {
+              "maHK": {
+                "type": "string",
+                "pattern": "^[0-9]+$"
+              },
+              "hoTen": {
+                "type": "string",
+                "minLength": 3
+              },
+              "ngaySinh": {
+                "type": "string",
+                "format": "date"
+              },
+              "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "dienThoai": {
+                "type": "string",
+                "pattern": "^[0-9]{9,11}$"
+              },
+              "soHoChieu": {
+                "type": "string",
+                "minLength": 6,
+                "maxLength": 12
+              },
+              "taiKhoan": {
+                "type": "object",
+                "required": ["maTK", "tenDangNhap"],
+                "properties": {
+                  "maTK": {
+                    "type": "string",
+                    "pattern": "^[0-9]+$"
+                  },
+                  "tenDangNhap": {
+                    "type": "string",
+                    "minLength": 3
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+}

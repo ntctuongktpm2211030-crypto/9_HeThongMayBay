@@ -1,0 +1,104 @@
+{
+      "tickets": [
+      {
+        "maVe": "1001",
+        "maDatCho": "1",
+        "maHK": "101",
+        "hangGhe": "Economy",
+        "soGhe": "12A",
+        "gia": 1500000.0,
+        "thanhTien": 1650000.0,
+        "trangThai": "Paid"
+      },
+      {
+        "maVe": "1002",
+        "maDatCho": "2",
+        "maHK": "102",
+        "hangGhe": "Business",
+        "soGhe": "3C",
+        "gia": 12000000.0,
+        "thanhTien": 13200000.0,
+        "trangThai": "Booked"
+      },
+      {
+        "maVe": "1003",
+        "maDatCho": "3",
+        "maHK": "103",
+        "hangGhe": "Economy",
+        "soGhe": "18B",
+        "gia": 2000000.0,
+        "thanhTien": 2200000.0,
+        "trangThai": "Cancelled"
+      },
+      {
+        "maVe": "1004",
+        "maDatCho": "4",
+        "maHK": "104",
+        "hangGhe": "Business",
+        "soGhe": "3A",
+        "gia": 12000000.0,
+        "thanhTien": 13200000.0,
+        "trangThai": "Paid"
+      },
+      {
+        "maVe": "1005",
+        "maDatCho": "5",
+        "maHK": "105",
+        "hangGhe": "Economy",
+        "soGhe": "15C",
+        "gia": 1800000.0,
+        "thanhTien": 1950000.0,
+        "trangThai": "Booked"
+      },
+      {
+        "maVe": "1001",
+        "maDatCho": "6",
+        "maHK": "106",
+        "hangGhe": "Economy",
+        "soGhe": "8D",
+        "gia": 1500000.0,
+        "thanhTien": 1650000.0,
+        "trangThai": "Paid"
+      },
+      {
+        "maVe": "1002",
+        "maDatCho": "7",
+        "maHK": "107",
+        "hangGhe": "Business",
+        "soGhe": "2B",
+        "gia": 12000000.0,
+        "thanhTien": 13200000.0,
+        "trangThai": "Booked"
+      },
+      {
+        "maVe": "1003",
+        "maDatCho": "8",
+        "maHK": "108",
+        "hangGhe": "Economy",
+        "soGhe": "14E",
+        "gia": 2000000.0,
+        "thanhTien": 2200000.0,
+        "trangThai": "Paid"
+      },
+      {
+        "maVe": "1004",
+        "maDatCho": "9",
+        "maHK": "109",
+        "hangGhe": "Business",
+        "soGhe": "1A",
+        "gia": 12000000.0,
+        "thanhTien": 13200000.0,
+        "trangThai": "Booked"
+      },
+      {
+        "maVe": "1005",
+        "maDatCho": "10",
+        "maHK": "110",
+        "hangGhe": "Economy",
+        "soGhe": "11F",
+        "gia": 1800000.0,
+        "thanhTien": 1950000.0,
+        "trangThai": "Paid"
+      }
+    ]
+  }

@@ -1,0 +1,14 @@
+{
+        "baggage": [
+      { "maKiGui": "1", "soKiGui": 2.0, "thanhToan": 500000.0 },
+      { "maKiGui": "2", "soKiGui": 1.0, "thanhToan": 300000.0 },
+      { "maKiGui": "3", "soKiGui": 3.0, "thanhToan": 750000.0 },
+      { "maKiGui": "4", "soKiGui": 2.0, "thanhToan": 500000.0 },
+      { "maKiGui": "5", "soKiGui": 1.0, "thanhToan": 300000.0 },
+      { "maKiGui": "6", "soKiGui": 4.0, "thanhToan": 1000000.0 },
+      { "maKiGui": "7", "soKiGui": 2.0, "thanhToan": 500000.0 },
+      { "maKiGui": "8", "soKiGui": 3.0, "thanhToan": 750000.0 },
+      { "maKiGui": "9", "soKiGui": 1.0, "thanhToan": 300000.0 },
+      { "maKiGui": "10", "soKiGui": 3.0, "thanhToan": 750000.0 }
+    ]
+}
