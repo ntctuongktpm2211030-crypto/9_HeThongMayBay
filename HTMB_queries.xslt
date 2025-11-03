@@ -65,9 +65,9 @@
                 <th>Quốc gia</th>
                 <th>IATA</th>
               </tr>
-              <xsl:for-each select="airport:Airports/airport:Airport">
+              <!-- <xsl:for-each select="airport:Airports/airport:Airport"> -->
                 <!-- <xsl:for-each select="airport:Airports/airport:Airport[airport:QuocGia='Việt Nam']"> -->
-              <!-- <xsl:for-each select="airport:Airports/airport:Airport[number(airport:MaSanBay) &lt; 5]"> <5-->
+              <xsl:for-each select="airport:Airports/airport:Airport[number(airport:MaSanBay) &lt; 5]"> 
               <!-- <xsl:for-each select="airport:Airports/airport:Airport[number(airport:MaSanBay) &gt;= 3 and number(airport:MaSanBay) &lt;= 6]"> trông khoảng-->
               <!-- <xsl:for-each select="airport:Airports/airport:Airport[
                   airport:QuocGia='Việt Nam'
@@ -98,9 +98,9 @@
                 <th>Đến</th>
                 <th>Khoảng cách (km)</th>
               </tr>
-              <xsl:for-each select="airport:Routes/airport:Route">
+              <!-- <xsl:for-each select="airport:Routes/airport:Route"> -->
                 <!-- <xsl:for-each select="airport:Routes/airport:Route[airport:MaSanBayDi='1']"> -->
-              <!-- <xsl:for-each select="airport:Routes/airport:Route[number(airport:KhoangCach) &gt; 2000]"> -->
+              <xsl:for-each select="airport:Routes/airport:Route[number(airport:KhoangCach) &gt; 2500]">
               <!-- <xsl:for-each select="airport:Routes/airport:Route[
                   number(airport:KhoangCach) &gt;= 1000
                   and number(airport:KhoangCach) &lt;= 3000
@@ -138,7 +138,12 @@
                 <th>Máy bay</th>
                 <th>Sức chứa</th>
               </tr>
-              <xsl:for-each select="airport:Flights/airport:Flight">
+              <!-- <xsl:for-each select="airport:Flights/airport:Flight"> -->
+              <xsl:for-each select="airport:Flights/airport:Flight[number(airport:SucChua) &gt; 200]">
+              <!-- <xsl:for-each select="airport:Flights/airport:Flight[
+                  airport:MauMaybay='Airbus A350'
+                  and number(airport:SucChua) &gt;= 200
+                ]"> -->
                 <tr>
                   <td><xsl:value-of select="airport:MaChuyenBay"/></td>
                   <td><xsl:value-of select="airport:SoHieu"/></td>
@@ -171,7 +176,9 @@
                 <th>Email</th>
                 <th>Hộ chiếu</th>
               </tr>
-              <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach">
+              <!-- <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach"> -->
+              <!-- <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach[starts-with(hk:NgaySinh, '2000')]"> -->
+              <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach[contains(hk:HoTen, 'Nguyễn')]">
                 <tr>
                   <td><xsl:value-of select="hk:MaHK"/></td>
                   <td><xsl:value-of select="hk:HoTen"/></td>
@@ -196,7 +203,9 @@
                 <th>Trạng thái</th>
                 <th>Tổng tiền</th>
               </tr>
-              <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho">
+              <!-- <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho"> -->
+              <!-- <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho[dc:TrangThai='XAC_NHAN']"> -->
+              <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho[number(dc:TongTien) &gt; 5000000]">
                 <tr>
                   <td><xsl:value-of select="dc:MaDatCho"/></td>
                   <td>
@@ -242,7 +251,8 @@
                 <th>Thành tiền</th>
                 <th>TT thanh toán</th>
               </tr>
-              <xsl:for-each select="airline:TicketDetails/airline:TicketDetail">
+              <!-- <xsl:for-each select="airline:TicketDetails/airline:TicketDetail"> -->
+              <xsl:for-each select="airline:TicketDetails/airline:TicketDetail[airline:HangGhe='Business']">
                 <tr>
                   <td><xsl:value-of select="airline:MaVe"/></td>
                   <td><xsl:value-of select="airline:MaDatCho"/></td>
@@ -256,6 +266,7 @@
                   <td><xsl:value-of select="airline:ThanhTien"/></td>
                   <td><xsl:value-of select="dc:TrangThai"/></td>
                 </tr>
+                  
               </xsl:for-each>
             </table>
           </section>
