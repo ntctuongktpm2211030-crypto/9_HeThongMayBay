@@ -1,0 +1,24 @@
+{
+  "DanhSachChiTietVe": {
+    "ChiTietVe": [
+      {
+        "MaVe": 1,
+        "MaDatCho": 1,
+        "MaHK": 1,
+        "HangGhe": "A",
+        "Gia": 1250000.25,
+        "ThanhTien": 2500000.5,
+        "TrangThai": "HoanThanh"
+      },
+      {
+        "MaVe": 2,
+        "MaDatCho": 2,
+        "MaHK": 2,
+        "HangGhe": "B",
+        "Gia": 900000.0,
+        "ThanhTien": 1800000.0,
+        "TrangThai": "ChoThanhToan"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$id": "https://example.com/ChiTietVe_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DanhSachChiTietVe",
+  "type": "object",
+  "properties": {
+    "DanhSachChiTietVe": { "$ref": "#/$defs/DanhSachChiTietVe" }
+  },
+  "required": ["DanhSachChiTietVe"],
+  "additionalProperties": false,
+  "$defs": {
+    "DanhSachChiTietVe": {
+      "type": "object",
+      "properties": {
+        "ChiTietVe": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ChiTietVe" }
+        }
+      },
+      "required": ["ChiTietVe"],
+      "additionalProperties": false
+    },
+    "ChiTietVe": {
+      "type": "object",
+      "properties": {
+        "MaVe": { "type": "integer", "minimum": 1 },
+        "MaDatCho": { "type": "integer", "minimum": 1 },
+        "MaHK": { "type": "integer", "minimum": 1 },
+        "HangGhe": { "type": "string", "pattern": "^[A-F]$" },
+        "Gia": { "type": "number", "minimum": 0 },
+        "ThanhTien": { "type": "number", "minimum": 0 },
+        "TrangThai": {
+          "type": "string",
+          "enum": ["HoanThanh", "ChoThanhToan", "DaHuy"]
+        }
+      },
+      "required": ["MaVe", "MaDatCho", "MaHK", "HangGhe", "Gia", "ThanhTien", "TrangThai"],
+      "additionalProperties": false
+    }
+  }
+}

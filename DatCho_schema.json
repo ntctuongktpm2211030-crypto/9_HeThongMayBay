@@ -1,0 +1,45 @@
+{
+  "$id": "https://example.com/DatCho_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DanhSachDatCho",
+  "type": "object",
+  "properties": {
+    "DanhSachDatCho": { "$ref": "#/$defs/DanhSachDatCho" }
+  },
+  "required": ["DanhSachDatCho"],
+  "additionalProperties": false,
+  "$defs": {
+    "DanhSachDatCho": {
+      "type": "object",
+      "properties": {
+        "DatCho": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/DatCho" }
+        }
+      },
+      "required": ["DatCho"],
+      "additionalProperties": false
+    },
+    "DatCho": {
+      "type": "object",
+      "properties": {
+        "MaDatCho": { "type": "integer", "minimum": 1 },
+        "MaTK": { "type": "integer", "minimum": 1 },
+        "MaChuyenBay": { "type": "integer", "minimum": 1 },
+        "MaKiGui": { "type": "integer", "minimum": 1 },
+        "MaPNR": { "type": "string", "minLength": 1, "maxLength": 10 },
+        "NgayDat": { "type": "string", "format": "date" },
+        "TrangThai": {
+          "type": "string",
+          "enum": ["MOI", "XAC_NHAN", "HUY"]
+        },
+        "TongTien": { "type": "number", "minimum": 0 },
+        "ThoiHanGiuCho": { "type": "string", "format": "date-time" },
+        "PhuongThucTT": { "type": "string" },
+        "GhiChu": { "type": ["string", "null"] }
+      },
+      "required": ["MaDatCho", "MaTK", "MaChuyenBay", "MaKiGui", "MaPNR", "NgayDat", "TrangThai", "TongTien", "ThoiHanGiuCho", "PhuongThucTT"],
+      "additionalProperties": false
+    }
+  }
+}
