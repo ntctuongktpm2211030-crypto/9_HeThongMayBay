@@ -13,6 +13,7 @@
   
   <xsl:output method="html" indent="yes" encoding="UTF-8"/>
   
+  
   <!-- Trang chính -->
   <xsl:template match="/c:CombinedAirlineSystem">
     <html lang="vi">
@@ -56,7 +57,7 @@
           
           <!-- 1. Sân bay -->
           <section id="airports">
-            <h2>1. Danh sách sân bay</h2>
+            <h2>1.Chi tiết các sân bay thuộc quốc gia việt nam</h2>
             <table>
               <tr>
                 <th>Mã</th>
@@ -66,15 +67,12 @@
                 <th>IATA</th>
               </tr>
               <!-- <xsl:for-each select="airport:Airports/airport:Airport"> -->
-                <!-- <xsl:for-each select="airport:Airports/airport:Airport[airport:QuocGia='Việt Nam']"> -->
-              <xsl:for-each select="airport:Airports/airport:Airport[number(airport:MaSanBay) &lt; 5]"> 
+                <xsl:for-each select="airport:Airports/airport:Airport[airport:QuocGia='Việt Nam']">
+              <!-- <xsl:for-each select="airport:Airports/airport:Airport[number(airport:MaSanBay) &lt; 5]">  -->
               <!-- <xsl:for-each select="airport:Airports/airport:Airport[number(airport:MaSanBay) &gt;= 3 and number(airport:MaSanBay) &lt;= 6]"> trông khoảng-->
-              <!-- <xsl:for-each select="airport:Airports/airport:Airport[
-                  airport:QuocGia='Việt Nam'
-                  and airport:ThanhPho='TP. Hồ Chí Minh'
+              <!-- <xsl:for-each select="airport:Airports/airport:Airport[airport:QuocGia='Việt Nam' and airport:ThanhPho='TP. Hồ Chí Minh'
                 ]"> -->
               <!-- <xsl:for-each select="airport:Airports/airport:Airport[starts-with(airport:MaIATA, 'S')]"> bắt đầu là S-->
-
                 <!-- <xsl:if test="airport:QuocGia='Việt Nam'"> -->
                 <tr>
                   <td><xsl:value-of select="airport:MaSanBay"/></td>
@@ -90,7 +88,7 @@
           
           <!-- 2. Tuyến bay -->
           <section id="routes">
-            <h2>2. Tuyến bay</h2>
+            <h2>2. Tuyến bay có khoảng các lớn hơn 1000 và nhỏ hơn 3000</h2>
             <table>
               <tr>
                 <th>Mã tuyến</th>
@@ -100,11 +98,11 @@
               </tr>
               <!-- <xsl:for-each select="airport:Routes/airport:Route"> -->
                 <!-- <xsl:for-each select="airport:Routes/airport:Route[airport:MaSanBayDi='1']"> -->
-              <xsl:for-each select="airport:Routes/airport:Route[number(airport:KhoangCach) &gt; 2500]">
-              <!-- <xsl:for-each select="airport:Routes/airport:Route[
+              <!-- <xsl:for-each select="airport:Routes/airport:Route[number(airport:KhoangCach) &gt; 2500]"> -->
+              <xsl:for-each select="airport:Routes/airport:Route[
                   number(airport:KhoangCach) &gt;= 1000
                   and number(airport:KhoangCach) &lt;= 3000
-                ]"> -->
+                ]">
                 <tr>
                   <td><xsl:value-of select="airport:MaTuyenBay"/></td>
                   <td>
@@ -127,7 +125,7 @@
           
           <!-- 3. Chuyến bay -->
           <section id="flights">
-            <h2>3. Chuyến bay</h2>
+            <h2>3. Chuyến bay Mẫu máy bay là " Airbus A350 " và sức chứa trên 200</h2>
             <table>
               <tr>
                 <th>Mã CB</th>
@@ -139,11 +137,11 @@
                 <th>Sức chứa</th>
               </tr>
               <!-- <xsl:for-each select="airport:Flights/airport:Flight"> -->
-              <xsl:for-each select="airport:Flights/airport:Flight[number(airport:SucChua) &gt; 200]">
-              <!-- <xsl:for-each select="airport:Flights/airport:Flight[
-                  airport:MauMaybay='Airbus A350'
-                  and number(airport:SucChua) &gt;= 200
-                ]"> -->
+              <!-- <xsl:for-each select="airport:Flights/airport:Flight[number(airport:SucChua) &gt; 200]"> -->
+              <xsl:for-each select="airport:Flights/airport:Flight[
+                  normalize-space(airport:MauMaybay) = 'Airbus A350'
+                  and number(airport:SucChua) &gt; 200
+                ]">
                 <tr>
                   <td><xsl:value-of select="airport:MaChuyenBay"/></td>
                   <td><xsl:value-of select="airport:SoHieu"/></td>
@@ -167,7 +165,7 @@
           
           <!-- 4. Hành khách -->
           <section id="passengers">
-            <h2>4. Hành khách</h2>
+            <h2>4. Lấy theo tên có chứa chữ “Nguyễn”</h2>
             <table>
               <tr>
                 <th>Mã HK</th>
@@ -179,6 +177,8 @@
               <!-- <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach"> -->
               <!-- <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach[starts-with(hk:NgaySinh, '2000')]"> -->
               <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach[contains(hk:HoTen, 'Nguyễn')]">
+              <!-- <xsl:for-each select="hk:DanhSachHanhKhach/hk:HanhKhach[contains(hk:NgaySinh, '-12-')]"> -->
+
                 <tr>
                   <td><xsl:value-of select="hk:MaHK"/></td>
                   <td><xsl:value-of select="hk:HoTen"/></td>
@@ -192,7 +192,7 @@
           
           <!-- 5. Đặt chỗ -->
           <section id="bookings">
-            <h2>5. Đặt chỗ</h2>
+            <h2>5. Lấy đặt chỗ có tổng tiền > 5 triệu</h2>
             <table>
               <tr>
                 <th>Mã DC</th>
@@ -205,7 +205,9 @@
               </tr>
               <!-- <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho"> -->
               <!-- <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho[dc:TrangThai='XAC_NHAN']"> -->
-              <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho[number(dc:TongTien) &gt; 5000000]">
+              <!-- <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho[number(dc:TongTien) &gt; 5000000]"> -->
+              <xsl:for-each select="dc:DanhSachDatCho/dc:DatCho[contains(dc:NgayDat, '2025-09-02')]">
+
                 <tr>
                   <td><xsl:value-of select="dc:MaDatCho"/></td>
                   <td>
@@ -240,7 +242,7 @@
           
           <!-- 6. Chi tiết vé -->
           <section id="tickets">
-            <h2>6. Chi tiết vé</h2>
+            <h2>6. Lấy vé có hạng ghế là Business</h2>
             <table>
               <tr>
                 <th>Mã vé</th>
