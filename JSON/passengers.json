@@ -1,3 +1,84 @@
 {
-    
+  "passengers": [
+    {
+      "maHK": "101",
+      "hoTen": "Nguyễn Văn An",
+      "ngaySinh": "1998-02-14",
+      "email": "an.nguyen@example.com",
+      "dienThoai": "0912345678",
+      "soHoChieu": "C1234567"
+    },
+    {
+      "maHK": "102",
+      "hoTen": "Trần Thị Bình",
+      "ngaySinh": "1999-05-20",
+      "email": "binh.tran@example.com",
+      "dienThoai": "0987654321",
+      "soHoChieu": "B7654321"
+    },
+    {
+      "maHK": "103",
+      "hoTen": "Lê Minh Châu",
+      "ngaySinh": "2001-11-03",
+      "email": "chau.le@example.com",
+      "dienThoai": "0901122334",
+      "soHoChieu": "H9988776"
+    },
+    {
+      "maHK": "104",
+      "hoTen": "Phạm Quốc Dũng",
+      "ngaySinh": "1997-07-07",
+      "email": "dung.pham@example.com",
+      "dienThoai": "0933666999",
+      "soHoChieu": "P1122334"
+    },
+    {
+      "maHK": "105",
+      "hoTen": "Võ Ngọc Hân",
+      "ngaySinh": "2000-01-10",
+      "email": "han.vo@example.com",
+      "dienThoai": "0911222333",
+      "soHoChieu": "N4455667"
+    },
+    {
+      "maHK": "106",
+      "hoTen": "Nguyễn Thị Cát Tường",
+      "ngaySinh": "2004-03-08",
+      "email": "cattuong.nguyen@example.com",
+      "dienThoai": "0968887776",
+      "soHoChieu": "V1237890"
+    },
+    {
+      "maHK": "107",
+      "hoTen": "Đặng Gia Huy",
+      "ngaySinh": "1996-12-01",
+      "email": "huy.dang@example.com",
+      "dienThoai": "0905566778",
+      "soHoChieu": "K3344556"
+    },
+    {
+      "maHK": "108",
+      "hoTen": "Hoàng Thu Ý",
+      "ngaySinh": "1995-09-18",
+      "email": "y.hoang@example.com",
+      "dienThoai": "0888999666",
+      "soHoChieu": "L7788990"
+    },
+    {
+      "maHK": "109",
+      "hoTen": "Phan Quỳnh Anh",
+      "ngaySinh": "2002-04-12",
+      "email": "quynhanh.phan@example.com",
+      "dienThoai": "0919001100",
+      "soHoChieu": "M5566778"
+    },
+    {
+      "maHK": "110",
+      "hoTen": "Mai Đức Bảo",
+      "ngaySinh": "1998-08-08",
+      "email": "bao.mai@example.com",
+      "dienThoai": "0909090909",
+      "soHoChieu": "R3344221"
+    }
+  ]
 }

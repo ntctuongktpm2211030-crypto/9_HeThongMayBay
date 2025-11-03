@@ -21,7 +21,7 @@ flights_101 = root.xpath("//airport:Flight[airport:MaTuyenBay='101']/airport:MaC
 print(flights_101)
 
 print("\n2) Hành khách có vé đã thanh toán (TicketDetails dc:TrangThai='Paid'):")
-paid_hk = root.xpath("""//airline:TicketDetail[dc:TrangThai='Paid']/tk:MaHK/text()""", namespaces=NS)
+paid_hk = root.xpath("//airline:TicketDetail[dc:TrangThai='Paid']/tk:MaHK/text()", namespaces=NS)
 print(paid_hk)
 
 print("\n3) Đếm số đặt chỗ theo trạng thái:")
