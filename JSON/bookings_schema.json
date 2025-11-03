@@ -1,0 +1,72 @@
+{
+    "bookings": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Bookings",
+      "type": "object",
+      "required": ["bookings"],
+      "properties": {
+        "bookings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "maDatCho",
+              "maTK",
+              "maChuyenBay",
+              "maPNR",
+              "ngayDat",
+              "trangThai",
+              "tongTien"
+            ],
+            "properties": {
+              "maDatCho": {
+                "type": "string",
+                "pattern": "^[0-9]+$"
+              },
+              "maTK": {
+                "type": "string",
+                "pattern": "^[0-9]+$"
+              },
+              "maChuyenBay": {
+                "type": "string",
+                "pattern": "^[0-9]+$"
+              },
+              "maKiGui": {
+                "type": "string",
+                "pattern": "^[0-9]+$"
+              },
+              "maPNR": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 20
+              },
+              "ngayDat": {
+                "type": "string",
+                "format": "date"
+              },
+              "trangThai": {
+                "type": "string",
+                "enum": ["MOI", "XAC_NHAN", "HUY"]
+              },
+              "tongTien": {
+                "type": "number",
+                "minimum": 0
+              },
+              "thoiHanGiuCho": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "phuongThucThanhToan": {
+                "type": "string"
+              },
+              "ghiChu": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+}

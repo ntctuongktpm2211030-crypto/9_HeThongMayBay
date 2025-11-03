@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Flights",
+  "type": "object",
+  "required": ["flights"],
+  "properties": {
+    "flights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "maChuyenBay",
+          "soHieu",
+          "maTuyenBay",
+          "sanBayDi",
+          "sanBayDen",
+          "gioDi",
+          "gioDen",
+          "loaiMayBay",
+          "sucChua"
+        ],
+        "properties": {
+          "maChuyenBay": { "type": "string", "pattern": "^[0-9]+$" },
+          "soHieu": { "type": "string" },
+          "maTuyenBay": { "type": "string", "pattern": "^[0-9]+$" },
+          "sanBayDi": { "type": "string" },
+          "sanBayDen": { "type": "string" },
+          "gioDi": { "type": "string", "format": "date-time" },
+          "gioDen": { "type": "string", "format": "date-time" },
+          "loaiMayBay": { "type": "string" },
+          "sucChua": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

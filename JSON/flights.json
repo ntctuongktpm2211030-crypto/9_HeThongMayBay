@@ -1,0 +1,81 @@
+{
+  "flights": [
+    {
+      "maChuyenBay": "501",
+      "soHieu": "1001",
+      "maTuyenBay": "101",
+      "sanBayDi": "1",
+      "sanBayDen": "8",
+      "gioDi": "2025-09-29T08:00:00",
+      "gioDen": "2025-09-29T10:00:00",
+      "loaiMayBay": "Airbus A320",
+      "sucChua": 180
+    },
+    {
+      "maChuyenBay": "502",
+      "soHieu": "1002",
+      "maTuyenBay": "102",
+      "sanBayDi": "2",
+      "sanBayDen": "6",
+      "gioDi": "2025-09-29T09:00:00",
+      "gioDen": "2025-09-29T11:00:00",
+      "loaiMayBay": "Boeing 737",
+      "sucChua": 160
+    },
+    {
+      "maChuyenBay": "503",
+      "soHieu": "1003",
+      "maTuyenBay": "103",
+      "sanBayDi": "3",
+      "sanBayDen": "4",
+      "gioDi": "2025-09-29T12:00:00",
+      "gioDen": "2025-09-29T15:00:00",
+      "loaiMayBay": "Airbus A321",
+      "sucChua": 200
+    },
+    {
+      "maChuyenBay": "504",
+      "soHieu": "1004",
+      "maTuyenBay": "104",
+      "sanBayDi": "7",
+      "sanBayDen": "5",
+      "gioDi": "2025-09-29T14:00:00",
+      "gioDen": "2025-09-29T18:00:00",
+      "loaiMayBay": "Boeing 787",
+      "sucChua": 250
+    },
+    {
+      "maChuyenBay": "505",
+      "soHieu": "1005",
+      "maTuyenBay": "105",
+      "sanBayDi": "5",
+      "sanBayDen": "1",
+      "gioDi": "2025-09-29T16:00:00",
+      "gioDen": "2025-09-29T19:00:00",
+      "loaiMayBay": "Airbus A350",
+      "sucChua": 300
+    },
+    {
+      "maChuyenBay": "506",
+      "soHieu": "1006",
+      "maTuyenBay": "106",
+      "sanBayDi": "8",
+      "sanBayDen": "2",
+      "gioDi": "2025-09-29T17:00:00",
+      "gioDen": "2025-09-29T19:30:00",
+      "loaiMayBay": "Airbus A350",
+      "sucChua": 250
+    },
+    {
+      "maChuyenBay": "507",
+      "soHieu": "1087",
+      "maTuyenBay": "107",
+      "sanBayDi": "6",
+      "sanBayDen": "3",
+      "gioDi": "2025-09-29T18:00:00",
+      "gioDen": "2025-09-29T21:00:00",
+      "loaiMayBay": "Airbus A330",
+      "sucChua": 250
+    }
+  ]
+}
