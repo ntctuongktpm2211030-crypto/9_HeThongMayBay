@@ -1,0 +1,18 @@
+{
+  "DanhSachTaiKhoan": {
+    "TaiKhoan": [
+      {
+        "MaTK": 1,
+        "TenDangNhap": "userA",
+        "MatKhau": "hashedpass123",
+        "MaHK": 1
+      },
+      {
+        "MaTK": 2,
+        "TenDangNhap": "userB",
+        "MatKhau": "hashedpass456",
+        "MaHK": 2
+      }
+    ]
+  }
+}

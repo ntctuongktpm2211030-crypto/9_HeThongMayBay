@@ -1,0 +1,20 @@
+{
+  "DanhSachThongTinHanhKhach": {
+    "ThongTinHanhKhach": [
+      {
+        "CCCD": 123456789,
+        "MaVe": 1,
+        "SoHoChieu": "123456789",
+        "HoTen": "Nguyễn Văn A",
+        "SoDienThoai": "0912345678"
+      },
+      {
+        "CCCD": 987654321,
+        "MaVe": 2,
+        "SoHoChieu": "987654321",
+        "HoTen": "Trần Thị B",
+        "SoDienThoai": "0987654321"
+      }
+    ]
+  }
+}

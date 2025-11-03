@@ -1,0 +1,22 @@
+{
+  "DanhSachHanhKhach": {
+    "HanhKhach": [
+      {
+        "MaHK": 1,
+        "HoTen": "Nguyễn Văn A",
+        "NgaySinh": "1990-05-15",
+        "Email": "nguyenvana@email.com",
+        "DienThoai": "0912345678",
+        "SoHoChieu": "123456789"
+      },
+      {
+        "MaHK": 2,
+        "HoTen": "Trần Thị B",
+        "NgaySinh": "1995-08-20",
+        "Email": "tranthib@email.com",
+        "DienThoai": "0987654321",
+        "SoHoChieu": "987654321"
+      }
+    ]
+  }
+}

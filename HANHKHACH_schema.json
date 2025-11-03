@@ -1,0 +1,39 @@
+{
+  "$id": "https://example.com/HANHKHACH_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DanhSachHanhKhach",
+  "type": "object",
+  "properties": {
+    "DanhSachHanhKhach": {
+      "$ref": "#/$defs/DanhSachHanhKhach"
+    }
+  },
+  "required": ["DanhSachHanhKhach"],
+  "additionalProperties": false,
+  "$defs": {
+    "DanhSachHanhKhach": {
+      "type": "object",
+      "properties": {
+        "HanhKhach": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/HanhKhach" }
+        }
+      },
+      "required": ["HanhKhach"],
+      "additionalProperties": false
+    },
+    "HanhKhach": {
+      "type": "object",
+      "properties": {
+        "MaHK": { "type": "integer", "minimum": 1 },
+        "HoTen": { "type": "string", "minLength": 1 },
+        "NgaySinh": { "type": "string", "format": "date" },
+        "Email": { "type": "string", "format": "email" },
+        "DienThoai": { "type": "string", "pattern": "^\\d{9,11}$" },
+        "SoHoChieu": { "type": "string", "minLength": 7, "maxLength": 12 }
+      },
+      "required": ["MaHK", "HoTen", "NgaySinh", "Email", "DienThoai"],
+      "additionalProperties": false
+    }
+  }
+}

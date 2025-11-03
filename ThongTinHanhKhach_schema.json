@@ -1,0 +1,36 @@
+{
+  "$id": "https://example.com/ThongTinHanhKhach_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DanhSachThongTinHanhKhach",
+  "type": "object",
+  "properties": {
+    "DanhSachThongTinHanhKhach": { "$ref": "#/$defs/DanhSachThongTinHanhKhach" }
+  },
+  "required": ["DanhSachThongTinHanhKhach"],
+  "additionalProperties": false,
+  "$defs": {
+    "DanhSachThongTinHanhKhach": {
+      "type": "object",
+      "properties": {
+        "ThongTinHanhKhach": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ThongTinHanhKhach" }
+        }
+      },
+      "required": ["ThongTinHanhKhach"],
+      "additionalProperties": false
+    },
+    "ThongTinHanhKhach": {
+      "type": "object",
+      "properties": {
+        "CCCD": { "type": "integer", "minimum": 100000000, "maximum": 999999999 },
+        "MaVe": { "type": "integer", "minimum": 1 },
+        "SoHoChieu": { "type": "string", "minLength": 7, "maxLength": 12 },
+        "HoTen": { "type": "string", "minLength": 1 },
+        "SoDienThoai": { "type": "string", "pattern": "^\\d{9,11}$" }
+      },
+      "required": ["CCCD", "MaVe", "SoHoChieu", "HoTen", "SoDienThoai"],
+      "additionalProperties": false
+    }
+  }
+}

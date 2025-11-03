@@ -1,0 +1,30 @@
+{
+  "DanhSachDatCho": {
+    "DatCho": [
+      {
+        "MaDatCho": 1,
+        "MaTK": 1,
+        "MaChuyenBay": 101,
+        "MaKiGui": 1,
+        "MaPNR": "ABC123",
+        "NgayDat": "2025-11-01",
+        "TrangThai": "DaXacNhan",
+        "TongTien": 2500000.5,
+        "ThoiHanGiuCho": "2025-11-01T23:59:00",
+        "PhuongThucTT": "TheTinDung"
+      },
+      {
+        "MaDatCho": 2,
+        "MaTK": 2,
+        "MaChuyenBay": 102,
+        "MaKiGui": 2,
+        "MaPNR": "DEF456",
+        "NgayDat": "2025-11-01",
+        "TrangThai": "ChoDuyet",
+        "TongTien": 1800000.0,
+        "ThoiHanGiuCho": "2025-11-02T12:00:00",
+        "PhuongThucTT": "ChuyenKhoan"
+      }
+    ]
+  }
+}
